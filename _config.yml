@@ -2,3 +2,9 @@ name: PseudoMuto.com
 author: David Muto
 markdown: redcarpet
 pygments: true
+
+main_nav:
+  - title: home
+    href: /
+  - title: about
+    href: /about/
