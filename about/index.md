@@ -1,24 +1,23 @@
 ---
-layout: default
+layout: page
 title: About Me
 selected_nav: about
 ---
 
-<div class="row">
-  <div class="col-6 col-sm-12 col-xs-12 col-lg-6 text-center">
-    <img style="padding-bottom: 20px" src="http://www.gravatar.com/avatar/2cf9c90cc7eb61ee14be216aea33a2be.png?s=320" alt="David Muto" title="David Muto">
-  </div>
-  <div class="col-6 col-sm-12 col-xs-12 col-lg-6"> 
-    <blockquote>My name is David Muto and I’m a code-aholic! I’ve been a professional developer in Toronto, Canada for over 10 years. I have a real passion for development, and strive to do the best job possible on every project I work on.</blockquote>
+<span class="about-page">
+  ![David Muto](http://www.gravatar.com/avatar/2cf9c90cc7eb61ee14be216aea33a2be.png?s=320 "David Muto")
 
-    <p>I work on large scale (20M+ uniques per year) projects in C#, Ruby on Rails, C and Objective-C. My focus of late has been on TDD, MVC (.NET and Ruby), and performance-based development principals and practices.</p>
+  My name is David Muto and I’m a code-aholic! I’ve been a professional developer in Toronto, Canada for over 10 years. I have a real passion for development, and strive to do the best job possible on every project I work on.
 
-    <p>I would say my strongest 5 languages are C#, C/++, Ruby, Python and JavaScript (I know it really well).</p>
+  Having worked within the industry for a while now, I have a solid understanding of the full lifecycle of a software development project and have a ton of experience learning and implementing new and emerging technologies.
 
-    <p>I use Test Driven Development and eXtreme Programming practices regardless of the language/environment I’m working in.</p>
+  While the bulk of my experience is with .NET, I’m a firm believer that developers should be polyglots and as such I am able to write high quality code in C#, C/C++, Objective-C, Java, JavaScript and Ruby. I also (in my spare time) work with Python.
 
-    <p>Finally, I am a Sun Certified Java Developer and a Microsoft Certified Professional Developer (MCPD).</p>
+  Being a full stack developer and equally comfortable in Windows and ‘Nix environments, I am able to quickly bring myself up to speed on desktop, mobile and web applications regardless of their platform or size. I firmly believe developers should work on all aspects of their applications, for web, this means front end, back end and dev ops.
 
-    <p>If you’re curious about what I do, checkout my portfolio or even better my <a href="https://github.com/pseudomuto" title="PseudoMuto on GitHub">GitHub</a> page!</p>
-  </div>
-</div>
+  I have a strong foundation in TDD and strive for 100% coverage in all of the code I write. This has given me production experience with several testing frameworks including MSTest, nUnit, xUnit, SenTest, Kiwi, RSpec, Cucumber and Jasmine, to name a few...
+
+  In a previous life I used to care about certifications, so I am a Sun Certified Java Developer and a Microsoft Certified Professional Developer (MCPD).
+
+  <blockquote class="lead">If you’re curious about what I do, checkout my portfolio or even better my <a href="https://github.com/pseudomuto" title="PseudoMuto on GitHub">GitHub</a> page!</blockquote>
+</span>

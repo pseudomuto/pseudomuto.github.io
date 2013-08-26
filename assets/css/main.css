@@ -30,3 +30,16 @@ $gradiendtEnd: #2f2727;*/
     border: 0; }
   .jumbotron .text-muted {
     color: #ddd; }
+
+.about-page {
+  float: left;
+  padding: 0 20px 20px 0; }
+
+#recent-posts {
+  font-size: 1.1em; }
+  #recent-posts ul {
+    margin-bottom: 20px; }
+    #recent-posts ul li {
+      line-height: 1.8; }
+    #recent-posts ul li:nth-child(2n + 1) {
+      background-color: #eef; }
