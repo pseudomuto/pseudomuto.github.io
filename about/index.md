@@ -1,6 +1,7 @@
 ---
 layout: default
 title: About Me
+selected_nav: about
 ---
 
 <div class="row">

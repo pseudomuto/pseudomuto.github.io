@@ -11,10 +11,10 @@
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
         {% for item in site.main_nav %}
-        <li{% if document.location.pathname == item.href %} class="active"{% endif %}><a href="{{ item.href }}">{{ item.title }}</a></li>
+        <li{% if page.selected_nav == item.title %} class="active"{% endif %}><a href="{{ item.href }}">{{ item.title }}</a></li>
         {% endfor %}
+        <li{% if page.selected_nav == "blog" %} class="active"{% endif %}><a href="{{ site.posts[0].url }}">blog</a></li>
       </ul>
-      
     </div>
   </div>
 </div>
