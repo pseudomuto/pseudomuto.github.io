@@ -15,6 +15,10 @@ $gradiendtEnd: #2f2727;*/
 $gradientEnd: #1a82f7;
 $gradientStart: #222;
 
+@mixin pad-bottom {
+  padding-bottom: 20px;
+}
+
 .jumbotron {
   color: #fff;
 
@@ -52,6 +56,10 @@ $gradientStart: #222;
   padding: 0 20px 20px 0;
 }
 
+#my-links {
+  @include pad-bottom;
+}
+
 #recent-posts {
   font-size: 1.1em;
   ul { 
@@ -61,6 +69,6 @@ $gradientStart: #222;
     li:nth-child(2n + 1) {
       background-color: #eef;
     }
-    margin-bottom: 20px;
+    @include pad-bottom;
   }
 }
