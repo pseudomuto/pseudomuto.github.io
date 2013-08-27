@@ -19,5 +19,5 @@ selected_nav: about
 
   In a previous life I used to care about certifications, so I am a Sun Certified Java Developer and a Microsoft Certified Professional Developer (MCPD).
 
-  <blockquote class="lead">If you’re curious about what I do, checkout my portfolio or even better my <a href="https://github.com/pseudomuto" title="PseudoMuto on GitHub">GitHub</a> page!</blockquote>
+  <blockquote class="lead">If you’re curious about what I do, checkout my (work in progress) [portfolio](/portfolio/) or even better my <a href="https://github.com/pseudomuto" title="PseudoMuto on GitHub">GitHub</a> page!</blockquote>
 </span>
