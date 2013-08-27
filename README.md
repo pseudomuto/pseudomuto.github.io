@@ -1,4 +1,4 @@
 pseudomuto.github.io
 ====================
 
-Source code for [my website](http://objective-muto.com/). This is in-progess, but the intent is to point my actual domain <http://pseudomuto.com/> to this source code.
+Nothing fancy here...just source code for [my website](http://pseudomuto.com/).
