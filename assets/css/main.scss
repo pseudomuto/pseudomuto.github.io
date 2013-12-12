@@ -1,4 +1,4 @@
-body { 
+body {
 	padding-top: 70px;
 	padding-bottom: 0;
 	margin-bottom: 0;
@@ -66,7 +66,7 @@ $gradientStart: #222;
 
 #recent-posts {
   font-size: 1.1em;
-  ul { 
+  ul {
     li {
       line-height: 1.8
     }
@@ -75,4 +75,9 @@ $gradientStart: #222;
     }
     @include pad-bottom;
   }
+}
+
+.blk-bg {
+  background-color: #000;
+  margin-bottom: 10px;
 }

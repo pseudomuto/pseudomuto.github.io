@@ -3,10 +3,10 @@ author: David Muto
 markdown: redcarpet
 pygments: true
 
+exclude: ['vendor']
+
 main_nav:
   - title: home
     href: /
   - title: about
     href: /about/
-  - title: portfolio
-    href: /portfolio/
