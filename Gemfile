@@ -5,3 +5,7 @@ gem "github-pages"
 gem "rake"
 gem "sass"
 gem "coffee-script"
+
+group :development do
+  gem 'foreman'
+end
