@@ -25,3 +25,6 @@ version:          2.1.0
 
 github:
   repo:           https://github.com/pseudomuto/pseudomuto.github.io
+
+sass:
+  style: :compressed
