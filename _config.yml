@@ -1,0 +1,27 @@
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
+exclude: ["vendor"]
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            pseudomuto.com
+tagline:          "Full-Frontal Nerdity"
+description:      "The ramblings of <a href=\"https://twitter.com/pseudomuto\">@pseudomuto</a>, a software developer in our nation's capital"
+url:              http://pseudomuto.com
+baseurl:          /
+
+author:
+  name:           'David Muto'
+  url:            https://twitter.com/pseudomuto
+
+paginate:         10
+
+# Custom vars
+version:          2.1.0
+
+github:
+  repo:           https://github.com/pseudomuto/pseudomuto.github.io
