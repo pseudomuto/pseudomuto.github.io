@@ -1,6 +1,5 @@
 # Dependencies
-markdown:         redcarpet
-highlighter:      pygments
+paginate: 10
 
 exclude: ["vendor"]
 
@@ -17,8 +16,6 @@ baseurl:          /
 author:
   name:           'David Muto'
   url:            https://twitter.com/pseudomuto
-
-paginate:         10
 
 # Custom vars
 version:          2.1.0
