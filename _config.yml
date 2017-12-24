@@ -4,24 +4,24 @@ paginate: 10
 exclude: ["vendor"]
 
 # Permalinks
-permalink:        pretty
+permalink: pretty
 
 # Setup
-title:            pseudomuto.com
-tagline:          "Full-Frontal Nerdity"
-description:      "The ramblings of <a href=\"https://twitter.com/pseudomuto\">@pseudomuto</a>, a software developer in our nation's capital"
-url:              http://pseudomuto.com
-baseurl:          /
+title:       pseudomuto.com
+tagline:     "Full-Frontal Nerdity"
+description: "The ramblings of <a href=\"https://twitter.com/pseudomuto\">@pseudomuto</a>, a software developer in our nation's capital"
+url:         http://pseudomuto.com
+baseurl:     "/"
 
 author:
-  name:           'David Muto'
-  url:            https://twitter.com/pseudomuto
+  name: "David Muto"
+  url:  https://twitter.com/pseudomuto
 
 # Custom vars
-version:          2.1.0
+version: 2.1.0
 
 github:
-  repo:           https://github.com/pseudomuto/pseudomuto.github.io
+  repo: https://github.com/pseudomuto/pseudomuto.github.io
 
 sass:
   style: :compressed
