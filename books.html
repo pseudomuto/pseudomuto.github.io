@@ -1,0 +1,25 @@
+---
+layout: page
+title: Books
+---
+
+<p>
+I like to read books. People tend to ask what I've been reading lately, so I thought I'd put together a list of the most interesting books I've been reading on my way into work and home. 
+</p>
+
+<p>Within each year, these are in no particular order.</p>
+
+{% for year in site.data.books %}
+<h2>Things I Read in {{ year.year }}</h2>
+  {% for book in year.books %}
+  <section class="book">
+    <img class="book__image" src="{{ book.thumbnail }}" alt="{{ book.title }}" />
+    <aside class="book__details">
+      <h3 class="book__title">{{ book.title }}</h3>
+      <p class="book__subtitle">{{ book.subtitle }}</p>
+      <p>{{ book.description }}</p>
+      <p><a title"{{ book.title }}" href="{{ book.url }}">View info</a></p>
+    </aside>
+  </section>
+  {% endfor %}
+{% endfor %}

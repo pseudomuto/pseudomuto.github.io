@@ -1,0 +1,329 @@
+---
+- year: 2017
+  books:
+  - isbn: '9780771038525'
+    title: Sapiens
+    subtitle: A Brief History of Humankind
+    thumbnail: http://books.google.com/books/content?id=Y41zAwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api
+    description: In Sapiens, Dr. Yuval Noah Harari spans the whole of human history,
+      from the very first humans to walk the earth to the radical -- and sometimes
+      devastating -- breakthroughs of the Cognitive, Agricultural, and Scientific
+      Revolutions.
+    url: https://market.android.com/details?id=book-Y41zAwAAQBAJ
+  - isbn: '9780141903491'
+    title: Outliers
+    subtitle: The Story of Success
+    thumbnail: http://books.google.com/books/content?id=ialrgIT41OAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api
+    description: 'From the bestselling author of Blink and The Tipping Point, Malcolm
+      Gladwell&#39;s Outliers: The Story of Success overturns conventional wisdom
+      about genius to show us what makes an ordinary person an extreme overachiever.'
+    url: https://books.google.com/books/about/Outliers.html?hl=&id=ialrgIT41OAC
+  - isbn: '9781455586660'
+    title: Deep Work
+    subtitle: Rules for Focused Success in a Distracted World
+    thumbnail: http://books.google.com/books/content?id=4QTzCAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api
+    description: Instead of arguing distraction is bad, he instead celebrates the
+      power of its opposite. Dividing this book into two parts, he first makes the
+      case that in almost any profession, cultivating a deep work ethic will produce
+      massive benefits.
+    url: https://market.android.com/details?id=book-4QTzCAAAQBAJ
+  - isbn: '9780887848186'
+    title: McMafia
+    subtitle: A Journey Through the Global Criminal Underworld
+    thumbnail: http://books.google.com/books/content?id=HH7dv-6r6IYC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api
+    description: Drugs, weapons, migrant labour, women — these are just a few of the
+      many goods that effortlessly cross national borders in this globalized age,
+      often without the knowledge or permission of the nations concerned.
+    url: https://books.google.com/books/about/McMafia.html?hl=&id=HH7dv-6r6IYC
+  - isbn: '9781449371746'
+    title: Propose, Prepare, Present
+    subtitle: How to become a successful, effective, and popular speaker at industry
+      conferences
+    thumbnail: http://books.google.com/books/content?id=xmPfeIWSx5IC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api
+    description: What does it take to be chosen to speak—and to rock the mic when
+      given the chance? This book takes you behind-the-scenes of the conference process,
+      showing you how to submit, plan, and deliver a talk that matters.
+    url: https://books.google.com/books/about/Propose_Prepare_Present.html?hl=&id=xmPfeIWSx5IC
+  - isbn: '9781610394796'
+    title: Guide to Analysing Companies
+    subtitle: 
+    thumbnail: http://books.google.com/books/content?id=zFiNBQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api
+    description: 'So how do you: Know whether a company is well run and doing well?
+      Decide which ratios and benchmarks to use to assess performance? Work out if
+      a company has massaged its results? Recognise the danger signs on the corporate
+      horizon?'
+    url: https://market.android.com/details?id=book-zFiNBQAAQBAJ
+  - isbn: '9781491943410'
+    title: Architecting for Scale
+    subtitle: High Availability for Your Growing Applications
+    thumbnail: http://books.google.com/books/content?id=FDmoDAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api
+    description: 'In five parts, this book explores: Availability: learn techniques
+      for building highly available applications, and for tracking and improving availability
+      going forward Risk management: identify, mitigate, and manage risks in your
+      ...'
+    url: https://market.android.com/details?id=book-FDmoDAAAQBAJ
+  - isbn: '9781783558971'
+    title: Cloudera Administration Handbook
+    subtitle: 
+    thumbnail: http://books.google.com/books/content?id=NcQOBAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api
+    description: An easy-to-follow Apache Hadoop administrator’s guide filled with
+      practical screenshots and explanations for each step and configuration. This
+      book is great for administrators interested in setting up and managing a large
+      Hadoop cluster.
+    url: https://market.android.com/details?id=book-NcQOBAAAQBAJ
+  - isbn: '9781491936139'
+    title: 'Kafka: The Definitive Guide'
+    subtitle: Real-Time Data and Stream Processing at Scale
+    thumbnail: http://books.google.com/books/content?id=a3wzDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api
+    description: If you’re an application architect, developer, or production engineer
+      new to Apache Kafka, this practical guide shows you how to use this open source
+      streaming platform to handle real-time data feeds.
+    url: https://books.google.com/books/about/Kafka_The_Definitive_Guide.html?hl=&id=a3wzDwAAQBAJ
+  - isbn: '9781449390778'
+    title: 'Kerberos: The Definitive Guide'
+    subtitle: The Definitive Guide
+    thumbnail: http://books.google.com/books/content?id=dGMd-uay-lkC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api
+    description: This book shows you how to put Kerberos authentication to work on
+      your Windows and Unix systems.
+    url: https://market.android.com/details?id=book-dGMd-uay-lkC
+  - isbn: '9781491936023'
+    title: 'Kubernetes: Up and Running'
+    subtitle: Dive Into the Future of Infrastructure
+    thumbnail: http://books.google.com/books/content?id=K5Q0DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api
+    description: This practical guide shows you how Kubernetes and container technology
+      can help you achieve new levels of velocity, agility, reliability, and efficiency.
+    url: https://books.google.com/books/about/Kubernetes_Up_and_Running.html?hl=&id=K5Q0DwAAQBAJ
+  - isbn: '9781449359065'
+    title: Learning Spark
+    subtitle: Lightning-Fast Big Data Analysis
+    thumbnail: http://books.google.com/books/content?id=2eptBgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api
+    description: This book introduces Apache Spark, the open source cluster computing
+      system that makes data analytics fast to write and fast to run.
+    url: https://books.google.com/books/about/Learning_Spark.html?hl=&id=2eptBgAAQBAJ
+  - isbn: '9781491909287'
+    title: Living Clojure
+    subtitle: An Introduction and Training Plan for Developers
+    thumbnail: http://books.google.com/books/content?id=SoodCAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api
+    description: If you’re an experienced programmer who has not worked with Clojure
+      before, this guide is the perfect thorough but gentle introduction for you.
+    url: https://market.android.com/details?id=book-SoodCAAAQBAJ
+  - isbn: '9781484226926'
+    title: Network Programming with Go
+    subtitle: Essential Skills for Using and Securing Networks
+    thumbnail: http://books.google.com/books/content?id=USTiDgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api
+    description: What You Will Learn Master network programming with Go Carry out
+      data serialization Use application-level protocols Manage character sets and
+      encodings Deal with HTTP(S) Build a complete Go-based web server Work with RPC,
+      web sockets, and ...
+    url: https://market.android.com/details?id=book-USTiDgAAQBAJ
+  - isbn: '9781944960162'
+    title: 'Financial Market History: Reflections on the Past for Investors Today'
+    subtitle: ''
+    thumbnail: http://books.google.com/books/content?id=RC0dDgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api
+    description: This book discusses some of the lessons drawn from the past that
+      may help practitioners when thinking about their portfolios.
+    url: https://market.android.com/details?id=book-RC0dDgAAQBAJ
+  - isbn: '9781847659538'
+    title: The Economist Guide To Financial Markets 6th Edition
+    subtitle: 
+    thumbnail: http://books.google.com/books/content?id=oBolAwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api
+    description: Business history is littered with disasters that occurred because
+      people involved their firms with financial instruments they didn&#39;t properly
+      understand. If they had had this book they might have avoided their mistakes.
+    url: https://books.google.com/books/about/The_Economist_Guide_To_Financial_Markets.html?hl=&id=oBolAwAAQBAJ
+  - isbn: '9781501121777'
+    title: Sprint
+    subtitle: How to Solve Big Problems and Test New Ideas in Just Five Days
+    thumbnail: http://books.google.com/books/content?id=rV0JCgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api
+    description: 'What will your idea look like in real life? How many meetings and
+      discussions does it take before you can be sure you have the right solution?
+      Now there’s a surefire way to answer these important questions: the sprint.'
+    url: https://market.android.com/details?id=book-rV0JCgAAQBAJ
+  - isbn: '9781250184726'
+    title: Extreme Ownership
+    subtitle: How U.S. Navy SEALs Lead and Win
+    thumbnail: http://books.google.com/books/content?id=tpspDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api
+    description: 'A compelling narrative with powerful instruction and direct application,
+      Extreme Ownership revolutionizes business management and challenges leaders
+      everywhere to fulfill their ultimate purpose: lead and win.'
+    url: https://market.android.com/details?id=book-tpspDwAAQBAJ
+  - isbn: '9781783551965'
+    title: Mastering DynamoDB
+    subtitle: 
+    thumbnail: http://books.google.com/books/content?id=JupaBAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api
+    description: If you have interest in DynamoDB and want to know what DynamoDB is
+      all about and become proficient in using it, this is the book for you.
+    url: https://market.android.com/details?id=book-JupaBAAAQBAJ
+  - isbn: '9780307463760'
+    title: Rework
+    subtitle: 
+    thumbnail: http://books.google.com/books/content?id=U77um_h_dgcC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api
+    description: You don&#39;t need to staff up. You don&#39;t need to waste time
+      on paperwork or meetings. You don&#39;t even need an office. Those are all just
+      excuses. What you really need to do is stop talking and start working. This
+      book shows you the way.
+    url: https://market.android.com/details?id=book-U77um_h_dgcC
+  - isbn: '9781591846581'
+    title: The Launch Pad
+    subtitle: Inside Y Combinator
+    thumbnail: http://books.google.com/books/content?id=smqJDQAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api
+    description: Offers fly-on-the-wall perspectives on the teachings of Silicon Valley
+      investment firm Y Combinator and its twice-annual selection of elite young entrepreneurs
+      who participate in intense three-month programs where they build small startups
+      ...
+    url: https://books.google.com/books/about/The_Launch_Pad.html?hl=&id=smqJDQAAQBAJ
+  - isbn: '9781430210771'
+    title: Founders at Work
+    subtitle: Stories of Startups' Early Days
+    thumbnail: http://books.google.com/books/content?id=ktm885vGIXEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api
+    description: How? What are the secrets that make successful startups so insanely
+      productive? Read this book, and let the founders themselves tell you.
+    url: https://market.android.com/details?id=book-ktm885vGIXEC
+  - isbn: '9781785034558'
+    title: Chaos Monkeys
+    subtitle: Inside the Silicon Valley Money Machine
+    thumbnail: http://books.google.com/books/content?id=ZC4UvgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api
+    description: Written by startup CEO and industry provocateur Antonio Garc a Mart
+      nez, this is Liar&#39;s Poker meets The Social Network. Computer engineers use
+      &#39;chaos monkey&#39; software to wreak havoc and test system robustness.
+    url: https://books.google.com/books/about/Chaos_Monkeys.html?hl=&id=ZC4UvgAACAAJ
+  - isbn: '9780698157439'
+    title: Overcoming Autism
+    subtitle: Finding the Answers, Strategies, and Hope That Can Transform a Child's
+      Life
+    thumbnail: http://books.google.com/books/content?id=jX8pAgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api
+    description: In this extraordinary book, Lynn Kern Koegel, a leading clinician,
+      researcher, and cofounder of the renowned Autism Research Center at the University
+      of California at Santa Barbara, combines her cutting-edge expertise with the
+      everyday ...
+    url: https://market.android.com/details?id=book-jX8pAgAAQBAJ
+- year: 2016
+  books:
+  - isbn: '9781118960875'
+    title: The Lean Product Playbook
+    subtitle: How to Innovate with Minimum Viable Products and Rapid Customer Feedback
+    thumbnail: http://books.google.com/books/content?id=dCOsBwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api
+    description: 'This book describes the Lean Product Process: a repeatable, easy-to-follow
+      methodology for iterating your way to product-market fit.'
+    url: https://books.google.com/books/about/The_Lean_Product_Playbook.html?hl=&id=dCOsBwAAQBAJ
+  - isbn: '9780307465351'
+    title: The 4-hour Workweek
+    subtitle: Escape 9-5, Live Anywhere, and Join the New Rich
+    thumbnail: http://books.google.com/books/content?id=hNmODQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api
+    description: An edition expanded with more than 100 pages of new content offers
+      a blueprint for a better life, whether one&#39;s dream is escaping the rat race,
+      experiencing high-end world travel, earning a monthly five-figure income with
+      zero management or ...
+    url: https://books.google.com/books/about/The_4_hour_Workweek.html?hl=&id=hNmODQAAQBAJ
+  - isbn: '9780133035506'
+    title: DevOps Troubleshooting
+    subtitle: Linux Server Best Practices
+    thumbnail: http://books.google.com/books/content?id=icPyQDU3xD4C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api
+    description: "“If you’re a developer trying to figure out why your application
+      is not responding at 3 am, you need this book! This is now my go-to book when
+      diagnosing production issues."
+    url: https://market.android.com/details?id=book-icPyQDU3xD4C
+  - isbn: '9781329199637'
+    title: Elements of Style
+    subtitle: 
+    thumbnail: http://books.google.com/books/content?id=OTHaCQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api
+    description: This book is intended for use in English courses in which the practice
+      of composition is combined with the study of literature.
+    url: https://books.google.com/books/about/Elements_of_Style.html?hl=&id=OTHaCQAAQBAJ
+  - isbn: '9781938162077'
+    title: 'Founder’s Pocket Guide: Cap Tables'
+    subtitle: ''
+    thumbnail: http://books.google.com/books/content?id=-8dYCwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api
+    description: The goal of this guide is to help you understand the key moving parts
+      of a startup cap table, review typical cap table inputs, and demystify terminology
+      and jargon associated with cap table discussions.
+    url: https://market.android.com/details?id=book--8dYCwAAQBAJ
+  - isbn: '9781633690721'
+    title: Get Backed
+    subtitle: Craft Your Story, Build the Perfect Pitch Deck, and Launch the Venture
+      of Your Dreams
+    thumbnail: http://books.google.com/books/content?id=MYJTrgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api
+    description: Here, Evan Baehr and Evan Loomis--two veterans of the startup world--will
+      show you how to create a compelling pitch deck and how to plan and execute a
+      fundraising road show that will win financial support for your business.
+    url: https://books.google.com/books/about/Get_Backed.html?hl=&id=MYJTrgEACAAJ
+  - isbn: '9780618918249'
+    title: The God Delusion
+    subtitle: 
+    thumbnail: http://books.google.com/books/content?id=OYpHYgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api
+    description: Argues that belief in God is irrational, and describes examples of
+      religion&#39;s negative influences on society throughout the centuries, such
+      as war, bigotry, child abuse, and violence.
+    url: https://books.google.com/books/about/The_God_Delusion.html?hl=&id=OYpHYgEACAAJ
+  - isbn: '9781449327057'
+    title: Hadoop Operations
+    subtitle: 
+    thumbnail: http://books.google.com/books/content?id=W5VWrrCOuQ8C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api
+    description: For system administrators tasked with the job of maintaining large
+      and complex Hadoop clusters, this book explains the particulars of Hadoop operations,
+      from planning, installing, and configuring the system to providing ongoing maintenance.
+    url: https://books.google.com/books/about/Hadoop_Operations.html?hl=&id=W5VWrrCOuQ8C
+  - isbn: '9781491900987'
+    title: Hadoop Security
+    subtitle: Protecting Your Big Data Platform
+    thumbnail: http://books.google.com/books/content?id=JE_poQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api
+    description: In this book, Cloudera professionals Ben Spivey and Joey Echeverria
+      provide a thorough treatment of Hadoop security architecture and implementation
+      to help architects navigate the common challenges of this phase.
+    url: https://books.google.com/books/about/Hadoop_Security.html?hl=&id=JE_poQEACAAJ
+  - isbn: '9780143193524'
+    title: Hooked
+    subtitle: How to Build Habit-Forming Products
+    thumbnail: http://books.google.com/books/content?id=oHHZBAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api
+    description: Hooked is based on Eyal’s years of research, consulting, and practical
+      experience. He wrote the book he wished had been available to him as a startup
+      founder – not abstract theory, but a how-to guide for building better products.
+    url: https://market.android.com/details?id=book-oHHZBAAAQBAJ
+  - isbn: '9780671646783'
+    title: Magic Of Thinking Big
+    subtitle: 
+    thumbnail: http://books.google.com/books/content?id=dCiKwV5CNHMC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api
+    description: This book gives you those secrets!
+    url: https://books.google.com/books/about/Magic_Of_Thinking_Big.html?hl=&id=dCiKwV5CNHMC
+  - isbn: '9781491929124'
+    title: Site Reliability Engineering
+    subtitle: How Google Runs Production Systems
+    thumbnail: http://books.google.com/books/content?id=81UrjwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api
+    description: 'This book is divided into four sections: Introduction--Learn what
+      site reliability engineering is and why it differs from conventional IT industry
+      practices Principles--Examine the patterns, behaviors, and areas of concern
+      that influence ...'
+    url: https://books.google.com/books/about/Site_Reliability_Engineering.html?hl=&id=81UrjwEACAAJ
+  - isbn: '9781449361303'
+    title: ZooKeeper
+    subtitle: Distributed Process Coordination
+    thumbnail: http://books.google.com/books/content?id=2UbJnQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api
+    description: Even with ZooKeeper, implementing coordination tasks is not trivial,
+      but this book provides good practices to give you a head start, and points out
+      caveats that developers and administrators alike need to watch for along the
+      way.
+    url: https://books.google.com/books/about/ZooKeeper.html?hl=&id=2UbJnQEACAAJ
+  - isbn: '9780978739218'
+    title: Release It!
+    subtitle: Design and Deploy Production-ready Software
+    thumbnail: http://books.google.com/books/content?id=md4uNwAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api
+    description: Provides information on ways to effectively design and release an
+      application.
+    url: https://books.google.com/books/about/Release_It.html?hl=&id=md4uNwAACAAJ
+  - isbn: '9781400067824'
+    title: Antifragile
+    subtitle: Things That Gain from Disorder
+    thumbnail: http://books.google.com/books/content?id=5E5o3_y5TpAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api
+    description: The best-selling author of The Black Swan shares philosophical insights
+      into how adversity and chaos can bring out the best in individuals and communities,
+      drawing on multiple disciplines to consider such topics as the superiority of
+      city ...
+    url: https://books.google.com/books/about/Antifragile.html?hl=&id=5E5o3_y5TpAC
+  - isbn: '9780062121004'
+    title: Great by Choice
+    subtitle: Uncertainty, Chaos, and Luck--Why Some Thrive Despite Them All
+    thumbnail: http://books.google.com/books/content?id=U2zY5IgM1MEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api
+    description: 'This book is classic Collins: contrarian, data-driven, and uplifting.
+      He and Hansen show convincingly that, even in a chaotic and uncertain world,
+      greatness happens by choice, not chance.'
+    url: https://market.android.com/details?id=book-U2zY5IgM1MEC

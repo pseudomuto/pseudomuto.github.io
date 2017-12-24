@@ -1,0 +1,50 @@
+#!/usr/bin/env ruby
+
+################################################################################
+# Generates book details based on ISBNs in _data/isbns.yml
+#
+# Usage: $0
+################################################################################
+
+require 'json'
+require 'net/http'
+require 'yaml'
+
+DATA_FILE  = '_data/books.yml'
+INPUT_FILE = '_data/isbns.yml'
+LOOKUP_URL = 'https://www.googleapis.com/books/v1/volumes?q=isbn:'
+
+def main
+  isbns_by_year = YAML.load_file(INPUT_FILE)
+  books_by_year = YAML.load_file(DATA_FILE) || []
+
+  isbns_by_year.each do |node|
+    known_books = books_by_year.find { |n| n['year'] == node.fetch('year') }
+    known_books = books_by_year.push('year' => node.fetch('year'), 'books' => []).last if known_books.nil?
+
+    wanted = node.fetch('isbns').map(&:to_s)
+    present = known_books.fetch('books').map { |b| b['isbn'] }.compact
+
+    (wanted - present).each do |isbn|
+      result = JSON.parse(Net::HTTP.get(URI("#{LOOKUP_URL}#{isbn}")))
+      unless result.key?('items')
+        puts isbn
+      end
+
+      item = result.fetch('items').first
+
+      known_books.fetch('books').push(
+        'isbn'        => isbn,
+        'title'       => item.dig('volumeInfo', 'title'),
+        'subtitle'    => item.dig('volumeInfo', 'subtitle'),
+        'thumbnail'   => item.dig('volumeInfo', 'imageLinks', 'thumbnail'),
+        'description' => item.dig('searchInfo', 'textSnippet'),
+        'url'         => item.dig('volumeInfo', 'canonicalVolumeLink')
+      )
+    end
+  end
+
+  IO.binwrite(DATA_FILE, books_by_year.to_yaml)
+end
+
+main
