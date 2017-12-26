@@ -13,7 +13,7 @@ I like to read books. People tend to ask what I've been reading lately, so I tho
 <h2>Things I Read in {{ year.year }}</h2>
   {% for book in year.books %}
   <section class="book">
-    <img class="book__image" src="{{ book.thumbnail }}" alt="{{ book.title }}" />
+    <img class="book__image" src="{{ book.thumbnail | replace_first: 'http:', '' }}" alt="{{ book.title }}" />
     <aside class="book__details">
       <h3 class="book__title">{{ book.title }}</h3>
       <p class="book__subtitle">{{ book.subtitle }}</p>
