@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://pseudomuto.com/2015/09/monitoring-rails-requests-with-statsd/</loc>
+    <lastmod>2015-09-04T17:03:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/2015/01/compiling-vim-with-ruby-and-python-support/</loc>
+    <lastmod>2015-01-27T17:03:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/2014/12/running-rails-inside-vagrant/</loc>
+    <lastmod>2014-12-27T17:03:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/2014/03/dining-philosophers-in-c/</loc>
+    <lastmod>2014-03-01T17:03:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/2013/12/freezing-and-thawing-git-state/</loc>
+    <lastmod>2013-12-11T17:07:53-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/2013/10/pushing-files-to-github-programmatically/</loc>
+    <lastmod>2013-10-07T17:07:53-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/2013/08/drying-out-specs-with-shared-examples/</loc>
+    <lastmod>2013-08-24T17:07:53-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/2013/08/continuous-integration-for-.net-with-travis-ci-and-xunit/</loc>
+    <lastmod>2013-08-13T17:07:53-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/2013/08/my-first-ruby-brigade-meetup/</loc>
+    <lastmod>2013-08-07T04:31:04-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/2013/07/testing-emberjs-apps-with-rails-and-qunit/</loc>
+    <lastmod>2013-07-28T04:31:04-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/2013/06/implementing-a-generic-stack-in-c/</loc>
+    <lastmod>2013-06-19T22:02:15-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/2013/05/implementing-a-generic-linked-list-in-c/</loc>
+    <lastmod>2013-05-02T12:35:10-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/2012/12/application-templates-for-rails/</loc>
+    <lastmod>2012-12-17T19:29:43-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/2012/10/changing-your-windows-8-product-key/</loc>
+    <lastmod>2012-10-28T15:08:22-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/2012/03/mvc-razor-helpers-using-delegates/</loc>
+    <lastmod>2012-03-09T14:57:32-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/2012/02/efficient-thread-safe-caching-with-asp.net/</loc>
+    <lastmod>2012-02-27T18:55:34-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/2011/12/set-up-a-subversion-server-in-ec2/</loc>
+    <lastmod>2011-12-24T20:21:47-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/2011/07/nsdate-from-odata/</loc>
+    <lastmod>2011-07-29T20:50:09-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/2011/07/showing-enums-as-a-select-list-in-mvc-and-razor/</loc>
+    <lastmod>2011-07-27T16:03:55-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/2011/03/global-namespace-includes-with-mvc-and-razor/</loc>
+    <lastmod>2011-03-07T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/tags/.net/</loc>
+    <lastmod>2013-08-13T17:07:53-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/tags/algorithms/</loc>
+    <lastmod>2014-03-01T17:03:00-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/tags/api/</loc>
+    <lastmod>2013-10-07T17:07:53-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/tags/automation/</loc>
+    <lastmod>2013-08-13T17:07:53-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/blog/</loc>
+    <lastmod>2015-09-04T17:03:00-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/tags/c/</loc>
+    <lastmod>2014-03-01T17:03:00-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/tags/caching/</loc>
+    <lastmod>2012-02-27T18:55:34-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/tags/chef/</loc>
+    <lastmod>2015-01-27T17:03:00-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/tags/ci/</loc>
+    <lastmod>2013-08-13T17:07:53-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/tags/data-structures/</loc>
+    <lastmod>2013-06-19T22:02:15-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/tags/dev-ops/</loc>
+    <lastmod>2011-12-24T20:21:47-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/tags/git/</loc>
+    <lastmod>2013-12-11T17:07:53-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/tags/github/</loc>
+    <lastmod>2013-10-07T17:07:53-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/tags/ios/</loc>
+    <lastmod>2011-07-29T20:50:09-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/tags/javascript/</loc>
+    <lastmod>2013-07-28T04:31:04-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/tags/mvc/</loc>
+    <lastmod>2012-03-09T14:57:32-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/tags/nuget/</loc>
+    <lastmod>2013-10-07T17:07:53-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/tags/objective-c/</loc>
+    <lastmod>2011-07-29T20:50:09-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/tags/odata/</loc>
+    <lastmod>2011-07-29T20:50:09-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/tags/rails/</loc>
+    <lastmod>2015-09-04T17:03:00-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/tags/razor/</loc>
+    <lastmod>2011-07-27T16:03:55-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/tags/rspec/</loc>
+    <lastmod>2013-08-24T17:07:53-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/tags/ruby/</loc>
+    <lastmod>2015-09-04T17:03:00-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/tags/shell/</loc>
+    <lastmod>2013-12-11T17:07:53-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/tags/source-control/</loc>
+    <lastmod>2011-12-24T20:21:47-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/tags/subversion/</loc>
+    <lastmod>2011-12-24T20:21:47-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/tags/</loc>
+    <lastmod>2013-08-13T17:07:53-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/tags/testing/</loc>
+    <lastmod>2013-08-24T17:07:53-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/tags/threading/</loc>
+    <lastmod>2014-03-01T17:03:00-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/tags/vagrant/</loc>
+    <lastmod>2014-12-27T17:03:00-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/tags/vim/</loc>
+    <lastmod>2015-01-27T17:03:00-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/</loc>
+    <lastmod>2015-09-04T17:03:00-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

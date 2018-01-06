@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+<meta name="generator" content="Hugo 0.32" />
+
+
+    <title>NSDate From OData | pseudomuto.com</title>
+
+    <base href="https://pseudomuto.com/">
+<link rel="canonical" href="https://pseudomuto.com/2011/07/nsdate-from-odata/">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400|Roboto+Slab:400,700|Roboto:300,300i,400,400i,500,500i,700,700i">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://pseudomuto.com/css/theme.css">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+  </head>
+  <body lang="en-US">
+    <div class="container">
+      
+  <header class="row text-left title">
+    <h1 class="title">NSDate From OData</h1>
+  </header>
+
+  <section id="category-pane" class="row meta">
+    
+    <div class="col-md-12">
+      <h6 class="text-left meta">
+         PUBLISHED ON JUL 29, 2011 
+        
+      </h6>
+    </div>
+    
+  </section>
+
+  <section id="content-pane" class="row">
+    <div class="col-md-12 text-justify content">
+      <p>Recently I&rsquo;ve been working on an iOS project that loads data that we publish via the <a href="http://www.odata.org/">Open Data
+Protocol</a>.</p>
+
+<p>At first everything was working perfectly. I was using <a href="https://github.com/johnezang/JSONKit">JSONKit</a> and
+<a href="http://developer.apple.com/library/ios/#documentation/cocoa/reference/NSOperation_class/Reference/Reference.html">NSOperation</a>
+to download and process the information. That was until I had to get a <code>DateTime</code> object&hellip;which resulted in an epic
+fail!</p>
+
+<p>It turns out that WCF Data Services publish DateTime objects as a new Date object represented by the time in
+milliseconds (not seconds) since January 1, 1970. Anyone familiar with <a href="http://en.wikipedia.org/wiki/Epoch_(reference_date)">EPOCH
+dates</a> knows about January 1, 1970 right?</p>
+
+<p>The problem isn&rsquo;t so much in that it publishes dates from a known time, rather that it does it in the least accessible
+way! The value is rendered out (in JSON) as <code>&quot;\/Date(1311836400000)\/&quot;</code> - yeah..I know, right?</p>
+
+<p>So now I had to figure out a nice way to parse this very custom date format in Objective-C. This led me to the shocking
+(<em>and borderline unacceptable</em>) realization that objective-c (lower case to drive the point home) <em><strong>has no support for
+regular expressions!!!</strong></em>. There&rsquo;s no punch-line to this joke&hellip;for real. No support for regex. A Unix-based OS has a
+development language that has no support for something that is natively supported (see the * below)!</p>
+
+<p>To start, I decided to add a category to the <code>NSDate</code> object that would allow me to work with these ridiculous strings.</p>
+
+<script src="//gist.github.com/pseudomuto/6335411.js"></script>
+
+<p>The code above allows me to get an <code>NSDate</code> from the crazy OData DateTime string and also convert an <code>NSDate</code> to another
+(quite different) format used by OData to query based on a DateTime value.</p>
+
+<p>To get an <code>NSDate</code> from the OData string, I am substring&rsquo;ing the value between the two brackets. This value is then
+converted to a long long value (twice on purpose for you .NET developers out there). The <code>NSDate</code> has a static method
+called <code>dateWithTimeIntervalSince1970:</code> that will return an (autoreleased) NSDate object with the value of the time (in
+seconds) since January 1, 1970.</p>
+
+<p>To get the date to the query format used by OData (see <a href="http://www.odata.org/developers/protocols/uri-conventions">OData URI
+Conventions</a>), we need to take an <code>NSDate</code> and get it into
+the format <code>yyyy-MM-dd'T'HH:mm:ss</code> for example, <code>2011-07-29T18:15:00</code>.</p>
+
+<p>I hope this information helps someone, as I was unable to find a simple example online anywhere (although I will concede
+that my googling skills could use some work).</p>
+
+<ul>
+<li><em>Please don&rsquo;t take this as a complete knock to Objective-C. The language is quite easy to work with and definitely
+robust&hellip;just lame on the regex front!</em></li>
+</ul>
+
+    </div>
+  </section>
+
+  <section id="tag-pane" class="row meta">
+    
+    <div class="col-md-12">
+      <h6 class="text-right meta">
+        
+        
+        
+        TAGS:
+        
+        
+        <a class="meta" href="/tags/ios">IOS</a>, 
+        
+        <a class="meta" href="/tags/objective-c">OBJECTIVE-C</a>, 
+        
+        <a class="meta" href="/tags/odata">ODATA</a>
+        
+        
+        
+      </h6>
+    </div>
+    
+  </section>
+
+  <section id="menu-pane" class="row menu text-center">
+  
+  
+  <span><a class="menu-item" href="https://pseudomuto.com/2011/07/showing-enums-as-a-select-list-in-mvc-and-razor/">&lt; prev | </a></span>
+  
+  
+  <span><a class="menu-item" href="/blog">blog</a></span>
+  
+  
+  <span><a class="menu-item" href="https://pseudomuto.com/2011/12/set-up-a-subversion-server-in-ec2/"> | next &gt;</a></span>
+  
+  
+  <h4 class="text-center"><a class="menu-item" href="https://pseudomuto.com/">home</a></h4>
+</section>
+
+
+
+      <footer>
+        <hr>
+        <h6 class="text-center copyright">Copyright &copy; 2018 pseudomuto.com. All rights reserved.</h6>
+      </footer>
+    </div>
+
+    
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-43533697-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </body>
+</html>

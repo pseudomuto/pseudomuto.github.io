@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on pseudomuto.com</title>
+    <link>https://pseudomuto.com/blog/</link>
+    <description>Recent content in Blogs on pseudomuto.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Copyright &amp;copy; 2018 pseudomuto.com. All rights reserved.</copyright>
+    <lastBuildDate>Fri, 04 Sep 2015 17:03:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://pseudomuto.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Monitoring Rails Requests with StatsD</title>
+      <link>https://pseudomuto.com/2015/09/monitoring-rails-requests-with-statsd/</link>
+      <pubDate>Fri, 04 Sep 2015 17:03:00 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/2015/09/monitoring-rails-requests-with-statsd/</guid>
+      <description>Monitoring your application is important - full stop. When the response time plummet&amp;rsquo;s you want to know before your customers do&amp;hellip;and certainly before you bother to check your twitter feed.
+There are lots of options here, and a lot of them require a ton of upfront investment in terms of time and effort. However, a simple way to get started is to simply log total request durations and track the number of successful and failed responses.</description>
+    </item>
+    
+    <item>
+      <title>Compiling Vim with Ruby and Python Support</title>
+      <link>https://pseudomuto.com/2015/01/compiling-vim-with-ruby-and-python-support/</link>
+      <pubDate>Tue, 27 Jan 2015 17:03:00 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/2015/01/compiling-vim-with-ruby-and-python-support/</guid>
+      <description>Like a lot of developers, I use vim. Of course, I don&amp;rsquo;t use straight out of the box vim though. I use Vundle and other settings (see my dot files for more) to make it better.
+Sometimes there are plugins, or packages that require vim to be compiled with support for ruby and/or python. One example of this is the excellent Command-T plugin. Unfortunately, the default package doesn&amp;rsquo;t include these flags during compilation.</description>
+    </item>
+    
+    <item>
+      <title>Running Rails Inside Vagrant</title>
+      <link>https://pseudomuto.com/2014/12/running-rails-inside-vagrant/</link>
+      <pubDate>Sat, 27 Dec 2014 17:03:00 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/2014/12/running-rails-inside-vagrant/</guid>
+      <description>I use vagrant (along with chef, a vagrant plugin and my dotfiles) for my development environment. I do this for a number of reasons, but mostly, I find it&amp;rsquo;s the easiest way to get everything installed and configured properly regardless of which physical box I&amp;rsquo;m working on.
+There are a number of issues I needed to address to get this all working. One of those, was getting a simple rails server from inside the VM to be available from my host&amp;rsquo;s browser.</description>
+    </item>
+    
+    <item>
+      <title>Dining Philosophers in C</title>
+      <link>https://pseudomuto.com/2014/03/dining-philosophers-in-c/</link>
+      <pubDate>Sat, 01 Mar 2014 17:03:00 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/2014/03/dining-philosophers-in-c/</guid>
+      <description>In a recent bout of insanity, I thought it would be cool to play around with concurrency in pure C. Nothing crazy, maybe controlling access to a shared resource and a semaphore or two for good measure.
+Since I assumed this would be no easy feat in C, I deciced I&amp;rsquo;d start with a problem I knew. So I went with the dining philosophers problem.
+Defining the Problem There are five (can be adjusted) philosophers sitting around a round table.</description>
+    </item>
+    
+    <item>
+      <title>Freezing and Thawing Git State</title>
+      <link>https://pseudomuto.com/2013/12/freezing-and-thawing-git-state/</link>
+      <pubDate>Wed, 11 Dec 2013 17:07:53 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/2013/12/freezing-and-thawing-git-state/</guid>
+      <description>We do lightening/dev talks every week at work, where a few developers get up and talk about cool projects or anything they think is interesting. One of the recent talks by James MacAuley was about git freeze and git thaw.
+The basic idea is that git stash kinda sucks sometimes. To show that, let&amp;rsquo;s run through an example.
+Example of Using Git Stash mkdir demo_repo &amp;amp;&amp;amp; cd demo_repo git init git commit -m &amp;#34;initial commit&amp;#34; --allow-empty touch README.</description>
+    </item>
+    
+    <item>
+      <title>Pushing Files to GitHub Programmatically</title>
+      <link>https://pseudomuto.com/2013/10/pushing-files-to-github-programmatically/</link>
+      <pubDate>Mon, 07 Oct 2013 17:07:53 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/2013/10/pushing-files-to-github-programmatically/</guid>
+      <description>Recently I had the opportunity to work with GitHub&amp;rsquo;s API again. This time I was particularily interested in the Repo Contents API. The goal was to be able to publish files from disk or embedded resource (read: stream) directly to a GitHub repo without having to clone the repo somewhere and then issue a git push.
+The API seemed (as is always with case with the GitHub API) straightforward and had methods for creating and updating files.</description>
+    </item>
+    
+    <item>
+      <title>Drying Out Specs With Shared Examples</title>
+      <link>https://pseudomuto.com/2013/08/drying-out-specs-with-shared-examples/</link>
+      <pubDate>Sat, 24 Aug 2013 17:07:53 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/2013/08/drying-out-specs-with-shared-examples/</guid>
+      <description>I generally find that most developers are fairly aware of and willing to apply the DRY principal on their main codebase. However, when I look through people&amp;rsquo;s tests, I find that the old copy/paste habit has found it&amp;rsquo;s way into their workflow (again?).
+I&amp;rsquo;m using &amp;ldquo;their code&amp;rdquo; to save face here&amp;hellip;I found this in my own code and started looking for ways to clean it up.
+So, let&amp;rsquo;s take a look at an example of how we can remove some duplication from our specs.</description>
+    </item>
+    
+    <item>
+      <title>Continuous Integration for .NET with Travis CI and xUnit</title>
+      <link>https://pseudomuto.com/2013/08/continuous-integration-for-.net-with-travis-ci-and-xunit/</link>
+      <pubDate>Tue, 13 Aug 2013 17:07:53 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/2013/08/continuous-integration-for-.net-with-travis-ci-and-xunit/</guid>
+      <description>For this post, I&amp;rsquo;m going to go over getting a simple CI environment setup using Travis CI and xUnit.
+If you&amp;rsquo;re one of those people that just wants to see the code, click here!
+Our goal is to have the following scenario: whenever a push happens (to any branch) on GitHub, a build of the app will be triggered by Travis CI. If the build succeeds, it will run all of the unit tests for your app.</description>
+    </item>
+    
+    <item>
+      <title>My First Ruby Brigade Meetup</title>
+      <link>https://pseudomuto.com/2013/08/my-first-ruby-brigade-meetup/</link>
+      <pubDate>Wed, 07 Aug 2013 04:31:04 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/2013/08/my-first-ruby-brigade-meetup/</guid>
+      <description>Last night I attended my first Ruby Brigade Meetup in Toronto and I have to admit…it was kinda fun!
+It was graciously hosted at Influitive’s downtown office on Adelaide St. When I got there I was happy to see some fancy boardrooms and a bunch of pairing stations for us to use. All in all, a great location.
+We got a little caught up in some general technology discussions so as expected we got started a little late.</description>
+    </item>
+    
+    <item>
+      <title>Testing EmberJS Apps with Rails and QUnit</title>
+      <link>https://pseudomuto.com/2013/07/testing-emberjs-apps-with-rails-and-qunit/</link>
+      <pubDate>Sun, 28 Jul 2013 04:31:04 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/2013/07/testing-emberjs-apps-with-rails-and-qunit/</guid>
+      <description>I recently started playing around with EmberJS. While I was insanely impressed with how easy it was to get a single-page app up and running, I was having difficulty getting QUnit setup correctly.
+After some finagling I was able to get it working. In my particular case I&amp;rsquo;m using Ruby 2.0.0 and Rails 4.0.0, though I&amp;rsquo;m sure this same setup would work with previous versions with minimal (if any) tweaks.</description>
+    </item>
+    
+    <item>
+      <title>Implementing a Generic Stack in C</title>
+      <link>https://pseudomuto.com/2013/06/implementing-a-generic-stack-in-c/</link>
+      <pubDate>Wed, 19 Jun 2013 22:02:15 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/2013/06/implementing-a-generic-stack-in-c/</guid>
+      <description>In a previous post I went over how we could create a generic linked list implementation in C which would allow the caller to determine that type of information stored in the list (via a void *).
+In accordance with my desire to share and the nerdy, sadistic, love/hate relationship I have with C, I&amp;rsquo;m going to cover how we can use the linked list code from the previous post to create a generic stack implementation with very little effort.</description>
+    </item>
+    
+    <item>
+      <title>Implementing a Generic Linked List in C</title>
+      <link>https://pseudomuto.com/2013/05/implementing-a-generic-linked-list-in-c/</link>
+      <pubDate>Thu, 02 May 2013 12:35:10 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/2013/05/implementing-a-generic-linked-list-in-c/</guid>
+      <description>Because I am a totally shameless nerd, I find myself writing applications in C from time to time just to make sure I still can. Aside from iOS development, I rarely have to work with C directly (without the help of a superset like C++ or Objective-C), but every once in a while I like to try and challenge myself to write an application in pure C.
+I&amp;rsquo;ve found that doing this has led to a much more profound understanding of modern languages and has really opened my eyes to the challenges faced by developers who write their own languages or work with compiler optimization (I know a few&amp;hellip;it sounds like tough work!</description>
+    </item>
+    
+    <item>
+      <title>Application Templates for Rails</title>
+      <link>https://pseudomuto.com/2012/12/application-templates-for-rails/</link>
+      <pubDate>Mon, 17 Dec 2012 19:29:43 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/2012/12/application-templates-for-rails/</guid>
+      <description>Frequently I find myself creating basic rails apps to demonstrate a new feature, or prototype something for a spike test. Every time I created an app, I would run rails new -T, then add RSpec, Cucumber, Haml, possibly Bootstrap, etc.
+After the 10th app in a month, I decided that there must be an easier way. Then I saw this post: http://everydayrails.com/2011/02/28/rails-3-application-templates.html
+I started reading up on generators and application templates, then I thought I&amp;rsquo;d write my own, to see how it works.</description>
+    </item>
+    
+    <item>
+      <title>Changing Your Windows 8 Product Key</title>
+      <link>https://pseudomuto.com/2012/10/changing-your-windows-8-product-key/</link>
+      <pubDate>Sun, 28 Oct 2012 15:08:22 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/2012/10/changing-your-windows-8-product-key/</guid>
+      <description>I just recently installed Windows 8 on my home computer. During the installation process, I was not asked to provide a product key. This led to me not being able to activate Windows after the installation process.
+To resolve this, follow these steps:
+ From the start screen, type cmd Right-click on Command Prompt and select Run as Administrator Execute the following command: slmgr -upk Press Windows+C to bring up the Charms window Select Settings and click Change PC Settings The Activate Windows tab will now ask you for your product key  Oddly enough, I had trouble finding this info so I thought I&amp;rsquo;d share.</description>
+    </item>
+    
+    <item>
+      <title>MVC Razor Helpers using Delegates</title>
+      <link>https://pseudomuto.com/2012/03/mvc-razor-helpers-using-delegates/</link>
+      <pubDate>Fri, 09 Mar 2012 14:57:32 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/2012/03/mvc-razor-helpers-using-delegates/</guid>
+      <description>Once in a while, I find myself implementing the same helper functions in different pages. In an effort to not repeat myself, I generally move helper functions into a common cshtml file in App_Code (as suggested here).
+While this works great for a single application, I’ve found myself copying helpers from project to project.
+So in order to avoid the copy-paste nightmare, I decided to see if I could abstract the basic functionality into an extension method and then have application specific rendering.</description>
+    </item>
+    
+    <item>
+      <title>Efficient, Thread-Safe Caching with ASP.NET</title>
+      <link>https://pseudomuto.com/2012/02/efficient-thread-safe-caching-with-asp.net/</link>
+      <pubDate>Mon, 27 Feb 2012 18:55:34 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/2012/02/efficient-thread-safe-caching-with-asp.net/</guid>
+      <description>Let me start by saying that I’ve made this mistake on many occasions in the past. I just assume that static/shared objects are thread-safe. Things like HttpContext.Current.Cache&amp;hellip;OOPS!
+A typical implementation of a cache lookup might look like this:
+ Let’s analyze this code in a little detail. Here are the steps performed:
+ Load the object from the Cache If the object is null (not found)  Create the object and store it in the cache  Return the object back to the caller  To start, we should ask, what happens if 10 simultaneous requests come through attempting to get to the cache object?</description>
+    </item>
+    
+    <item>
+      <title>Set up a Subversion Server in EC2</title>
+      <link>https://pseudomuto.com/2011/12/set-up-a-subversion-server-in-ec2/</link>
+      <pubDate>Sat, 24 Dec 2011 20:21:47 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/2011/12/set-up-a-subversion-server-in-ec2/</guid>
+      <description>I recently wanted to setup a subversion server. Initially I thought of using Beanstalk since they handle pretty much everything for you for a very small monthly fee. However, I thought I might set up my own server in order to learn the process.
+I found a few online resources that outlined the process, but none of them were exactly what I needed, so I decided to write this post to go over the steps in detail.</description>
+    </item>
+    
+    <item>
+      <title>NSDate From OData</title>
+      <link>https://pseudomuto.com/2011/07/nsdate-from-odata/</link>
+      <pubDate>Fri, 29 Jul 2011 20:50:09 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/2011/07/nsdate-from-odata/</guid>
+      <description>Recently I&amp;rsquo;ve been working on an iOS project that loads data that we publish via the Open Data Protocol.
+At first everything was working perfectly. I was using JSONKit and NSOperation to download and process the information. That was until I had to get a DateTime object&amp;hellip;which resulted in an epic fail!
+It turns out that WCF Data Services publish DateTime objects as a new Date object represented by the time in milliseconds (not seconds) since January 1, 1970.</description>
+    </item>
+    
+    <item>
+      <title>Showing Enums as a Select List in MVC and Razor</title>
+      <link>https://pseudomuto.com/2011/07/showing-enums-as-a-select-list-in-mvc-and-razor/</link>
+      <pubDate>Wed, 27 Jul 2011 16:03:55 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/2011/07/showing-enums-as-a-select-list-in-mvc-and-razor/</guid>
+      <description>Recently I needed to show a drop down list of all of the enumeration values. So I did what we all do and hit up Google. While there was plenty of information out there detailing how to convert the enum to a Dictionary&amp;lt;int, string&amp;gt; and render it, I couldn&amp;rsquo;t find something that fit my needs.
+Essentially I have an enumeration of field types. I wanted to display the names of those fields in a drop down list, but be able to make some of them prettier.</description>
+    </item>
+    
+    <item>
+      <title>Global Namespace Includes with MVC and Razor</title>
+      <link>https://pseudomuto.com/2011/03/global-namespace-includes-with-mvc-and-razor/</link>
+      <pubDate>Mon, 07 Mar 2011 00:00:00 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/2011/03/global-namespace-includes-with-mvc-and-razor/</guid>
+      <description>While I&amp;rsquo;m loving MVC3 and the Razor view engine, I was sorely disappointed when I couldn&amp;rsquo;t use the system.web/pages/namespaces collection in web.config to add global namespace includes.
+After a bit of hunting and looking through the web.config files underneath the views folder (in each Area), I found that this can be accomplished by adding the following to the root web.config file:
+ Now you can add any namespaces you require under the new razor namespaces section.</description>
+    </item>
+    
+  </channel>
+</rss>
