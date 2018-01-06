@@ -10,10 +10,10 @@
 <meta name="generator" content="Hugo 0.32" />
 
 
-    <title>pseudomuto.com</title>
+    <title>Global Namespace Includes with MVC and Razor | pseudomuto.com</title>
 
     <base href="https://pseudomuto.com/">
-<link rel="canonical" href="https://pseudomuto.com/">
+<link rel="canonical" href="https://pseudomuto.com/2011/03/global-namespace-includes-with-mvc-and-razor/">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400|Roboto+Slab:400,700|Roboto:300,300i,400,400i,500,500i,700,700i">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
@@ -25,57 +25,77 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="Page%28%22pseudomuto.com%22%29" rel="alternate" type="application/rss+xml" title="pseudomuto.com" />
-<link href="Page%28%22pseudomuto.com%22%29" rel="feed" type="application/rss+xml" title="pseudomuto.com" />
-
 
   </head>
   <body lang="en-US">
     <div class="container">
       
-  <header class="row text-center header">
-     <img src="/img/pseudomuto.jpg" alt="Author Image" class="img-circle text-center headshot"> 
-    <h1 class="author">David Muto</h1>
+  <header class="row text-left title">
+    <h1 class="title">Global Namespace Includes with MVC and Razor</h1>
   </header>
 
-  <section id="info-pane" class="row text-center info">
-    <h3 class="intro">Full Frontal Nerdity</h3>
-    <h4 class="description"><p>I sometimes speak at conferences, read books, make babies, and dream in code.</p>
-
-<p>Currently <a href="https://www.shopify.com/careers">@Shopify</a></p>
-</h4>
-  </section>
-
-  <section id="social-pane" class="row text-center social">
+  <section id="category-pane" class="row meta">
     
-    <a href="https://twitter.com/pseudomuto"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-    
-    
-    
-    
-    <a href="https://github.com/pseudomuto"><i class="fa fa-github" aria-hidden="true"></i></a>
-    
-    
-    
-    <a href="https://linkedin.com/in/davidmuto"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-    
-    
-    
-    
-    
-    
-    <a href="mailto:david.muto@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
-    
+    <div class="col-md-12">
+      <h6 class="text-left meta">
+         PUBLISHED ON MAR 7, 2011 
+        
+      </h6>
+    </div>
     
   </section>
 
-  <section id="main-menu-pane" class="row text-center main-menu">
+  <section id="content-pane" class="row">
+    <div class="col-md-12 text-justify content">
+      <p>While I&rsquo;m loving MVC3 and the Razor view engine, I was sorely disappointed when I couldn&rsquo;t use the
+<code>system.web/pages/namespaces</code> collection in <code>web.config</code> to add global namespace includes.</p>
+
+<p>After a bit of hunting and looking through the web.config files underneath the views folder (in each Area), I found that
+this can be accomplished by adding the following to the root <code>web.config</code> file:</p>
+
+<script src="//gist.github.com/pseudomuto/6335507.js"></script>
+
+<p>Now you can add any namespaces you require under the new razor namespaces section.</p>
+
+    </div>
+  </section>
+
+  <section id="tag-pane" class="row meta">
     
-    <h4><a class="menu-item" href="/blog/">blog</a></h4>
-    
-    <h4><a class="menu-item" href="https://www.goodreads.com/review/list/24864984-david-muto?sort=date_read&amp;order=d">books</a></h4>
+    <div class="col-md-12">
+      <h6 class="text-right meta">
+        
+        
+        
+        TAGS:
+        
+        
+        <a class="meta" href="/tags/.net">.NET</a>, 
+        
+        <a class="meta" href="/tags/mvc">MVC</a>, 
+        
+        <a class="meta" href="/tags/razor">RAZOR</a>
+        
+        
+        
+      </h6>
+    </div>
     
   </section>
+
+  <section id="menu-pane" class="row menu text-center">
+  
+  
+  
+  <span><a class="menu-item" href="/blog">blog</a></span>
+  
+  
+  <span><a class="menu-item" href="https://pseudomuto.com/2011/07/showing-enums-as-a-select-list-in-mvc-and-razor/"> | next &gt;</a></span>
+  
+  
+  <h4 class="text-center"><a class="menu-item" href="https://pseudomuto.com/">home</a></h4>
+</section>
+
 
 
       <footer>

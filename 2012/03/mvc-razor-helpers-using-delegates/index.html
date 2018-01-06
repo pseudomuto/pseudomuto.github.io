@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+<meta name="generator" content="Hugo 0.32" />
+
+
+    <title>MVC Razor Helpers using Delegates | pseudomuto.com</title>
+
+    <base href="https://pseudomuto.com/">
+<link rel="canonical" href="https://pseudomuto.com/2012/03/mvc-razor-helpers-using-delegates/">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400|Roboto+Slab:400,700|Roboto:300,300i,400,400i,500,500i,700,700i">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://pseudomuto.com/css/theme.css">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+  </head>
+  <body lang="en-US">
+    <div class="container">
+      
+  <header class="row text-left title">
+    <h1 class="title">MVC Razor Helpers using Delegates</h1>
+  </header>
+
+  <section id="category-pane" class="row meta">
+    
+    <div class="col-md-12">
+      <h6 class="text-left meta">
+         PUBLISHED ON MAR 9, 2012 
+        
+      </h6>
+    </div>
+    
+  </section>
+
+  <section id="content-pane" class="row">
+    <div class="col-md-12 text-justify content">
+      <p>Once in a while, I find myself implementing the same helper functions in
+different pages. In an effort to not repeat myself, I generally move helper
+functions into a common cshtml file in App_Code (as
+<a href="http://blog.slaks.net/2011/03/dissecting-razor-part-8-static-helpers.html">suggested here</a>).</p>
+
+<p>While this works great for a single application, I’ve found myself copying
+helpers from project to project.</p>
+
+<p>So in order to avoid the copy-paste nightmare, I decided to see if I could abstract the basic functionality into an
+extension method and then have application specific rendering. This concept is similar to writing templated server
+controls in a web forms environment.</p>
+
+<p>The first step is to create a new class library and add a static class to it. I called my class
+<code>HtmlHelperExtensions.cs</code></p>
+
+<script src="//gist.github.com/pseudomuto/6335058.js?file=HtmlHelperExtensions_shell.cs"></script>
+
+<p>One particular helper I use a lot is rendering something based on a condition.  For example, show a logout button if the
+user is logged in, or render items in there are any. The following methods can be used to accomplish this.</p>
+
+<script src="//gist.github.com/pseudomuto/6335058.js?file=HtmlHelperExtensions_methods.cs"></script>
+
+<p>Both of these methods are extensions for the <code>HtmlHelper</code> class (the one you’re using when you write <code>Html.SomeMethod()</code>
+in your views). The first one takes a template, an <code>IEnumerable</code> of the type and a condition. The second is simply a
+little syntactic sugar to allow passing a single item instead of an <code>IEnumerable</code>.</p>
+
+<p>Here are some example calls for these functions.</p>
+
+<script src="//gist.github.com/pseudomuto/6335058.js?file=view.cshtml"></script>
+
+<p>Let’s assume you want to render something if the user is in a specific role.  You could accomplish this by adding some
+more sugar.</p>
+
+<script src="//gist.github.com/pseudomuto/6335058.js?file=HtmlHelperExtensions_sugar.cs"></script>
+
+<p>Hopefully someone will find this of some use. Let me know what you think!</p>
+
+    </div>
+  </section>
+
+  <section id="tag-pane" class="row meta">
+    
+    <div class="col-md-12">
+      <h6 class="text-right meta">
+        
+        
+        
+        TAGS:
+        
+        
+        <a class="meta" href="/tags/.net">.NET</a>, 
+        
+        <a class="meta" href="/tags/mvc">MVC</a>
+        
+        
+        
+      </h6>
+    </div>
+    
+  </section>
+
+  <section id="menu-pane" class="row menu text-center">
+  
+  
+  <span><a class="menu-item" href="https://pseudomuto.com/2012/02/efficient-thread-safe-caching-with-asp.net/">&lt; prev | </a></span>
+  
+  
+  <span><a class="menu-item" href="/blog">blog</a></span>
+  
+  
+  <span><a class="menu-item" href="https://pseudomuto.com/2012/10/changing-your-windows-8-product-key/"> | next &gt;</a></span>
+  
+  
+  <h4 class="text-center"><a class="menu-item" href="https://pseudomuto.com/">home</a></h4>
+</section>
+
+
+
+      <footer>
+        <hr>
+        <h6 class="text-center copyright">Copyright &copy; 2018 pseudomuto.com. All rights reserved.</h6>
+      </footer>
+    </div>
+
+    
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-43533697-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </body>
+</html>

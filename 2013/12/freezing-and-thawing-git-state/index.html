@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+<meta name="generator" content="Hugo 0.32" />
+
+
+    <title>Freezing and Thawing Git State | pseudomuto.com</title>
+
+    <base href="https://pseudomuto.com/">
+<link rel="canonical" href="https://pseudomuto.com/2013/12/freezing-and-thawing-git-state/">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400|Roboto+Slab:400,700|Roboto:300,300i,400,400i,500,500i,700,700i">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://pseudomuto.com/css/theme.css">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+  </head>
+  <body lang="en-US">
+    <div class="container">
+      
+  <header class="row text-left title">
+    <h1 class="title">Freezing and Thawing Git State</h1>
+  </header>
+
+  <section id="category-pane" class="row meta">
+    
+    <div class="col-md-12">
+      <h6 class="text-left meta">
+         PUBLISHED ON DEC 11, 2013 
+        
+      </h6>
+    </div>
+    
+  </section>
+
+  <section id="content-pane" class="row">
+    <div class="col-md-12 text-justify content">
+      
+
+<p>We do lightening/dev talks every week at work, where a few developers get up and talk about cool projects or anything
+they think is interesting. One of the recent talks by <a href="https://twitter.com/jamesmacaulay">James MacAuley</a> was about git freeze and git thaw.</p>
+
+<p>The basic idea is that git stash kinda sucks sometimes. To show that, let&rsquo;s run through an example.</p>
+
+<h2 id="example-of-using-git-stash">Example of Using Git Stash</h2>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mkdir demo_repo <span style="color:#f92672">&amp;&amp;</span> cd demo_repo
+git init
+git commit -m <span style="color:#e6db74">&#34;initial commit&#34;</span> --allow-empty
+touch README.md
+touch LICENSE
+git add README.md</code></pre></div>
+
+<p>Now if we run <code>git status</code>, we should see the following:</p>
+
+<p><img src="img/git_status_001.png" alt="git status" /></p>
+
+<p>If we now stash our changes and get the status, we&rsquo;ll see that LICENSE is still untracked.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git stash
+git status</code></pre></div>
+
+<p><img src="img/git_status_002.png" alt="git status" /></p>
+
+<p>This is intentional. As a rule, git will not do anything with files it&rsquo;s not tracking. This comes in handy for things
+like password files (arguably should be git ignored) and other files that don&rsquo;t belong in git.</p>
+
+<p>However, there are times when you want to take the current state of your working directory and stash it. And when you
+<code>pop</code> the stash you want everything to go back to the way it was.</p>
+
+<p>Luckily, git will convert any executable file in your path to a custom command. All we need to do it call it
+<code>git-&lt;command&gt;</code> and voila!</p>
+
+<h2 id="git-freeze-and-git-thaw">Git Freeze and Git Thaw</h2>
+
+<p>The goal of git freeze is to create two commits: <code>WIP [STAGED]</code> and <code>WIP [UNSTANGED]</code> containing the staged and unstages
+files respectively.</p>
+
+<p>These scripts were developed by <a href="https://twitter.com/jamesmacaulay">James Macauley</a>. You can check out the original gist
+<a href="https://gist.github.com/jamesmacaulay/582757">here</a>.</p>
+
+<script src="//gist.github.com/pseudomuto/7922871.js?file=git-freeze"></script>
+
+<p>Thaw reverses the process by resetting <code>HEAD</code> appropriately.</p>
+
+<script src="//gist.github.com/pseudomuto/7922871.js?file=git-thaw"></script>
+
+<p>Both scripts take care to only create/revert commits if they&rsquo;re needed.</p>
+
+<h2 id="making-it-work">Making It Work</h2>
+
+<p>These scripts should be placed in a directory in your <code>$PATH</code>. <em><strong>Make sure to make them executable.</strong></em></p>
+
+<p>Going back to our <code>demo_repo</code> example from earlier, let&rsquo;s pop that stash.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git stash pop</code></pre></div>
+
+<p>You should see this again:</p>
+
+<p><img src="img/git_status_001.png" alt="git status" /></p>
+
+<p>Now we can run <code>git freeze</code> to uh&hellip;<em>freeze</em> the current state. And <code>git thaw</code> to thaw it out again.</p>
+
+    </div>
+  </section>
+
+  <section id="tag-pane" class="row meta">
+    
+    <div class="col-md-12">
+      <h6 class="text-right meta">
+        
+        
+        
+        TAGS:
+        
+        
+        <a class="meta" href="/tags/git">GIT</a>, 
+        
+        <a class="meta" href="/tags/shell">SHELL</a>
+        
+        
+        
+      </h6>
+    </div>
+    
+  </section>
+
+  <section id="menu-pane" class="row menu text-center">
+  
+  
+  <span><a class="menu-item" href="https://pseudomuto.com/2013/10/pushing-files-to-github-programmatically/">&lt; prev | </a></span>
+  
+  
+  <span><a class="menu-item" href="/blog">blog</a></span>
+  
+  
+  <span><a class="menu-item" href="https://pseudomuto.com/2014/03/dining-philosophers-in-c/"> | next &gt;</a></span>
+  
+  
+  <h4 class="text-center"><a class="menu-item" href="https://pseudomuto.com/">home</a></h4>
+</section>
+
+
+
+      <footer>
+        <hr>
+        <h6 class="text-center copyright">Copyright &copy; 2018 pseudomuto.com. All rights reserved.</h6>
+      </footer>
+    </div>
+
+    
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-43533697-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </body>
+</html>

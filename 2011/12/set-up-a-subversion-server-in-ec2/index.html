@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+<meta name="generator" content="Hugo 0.32" />
+
+
+    <title>Set up a Subversion Server in EC2 | pseudomuto.com</title>
+
+    <base href="https://pseudomuto.com/">
+<link rel="canonical" href="https://pseudomuto.com/2011/12/set-up-a-subversion-server-in-ec2/">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400|Roboto+Slab:400,700|Roboto:300,300i,400,400i,500,500i,700,700i">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://pseudomuto.com/css/theme.css">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+  </head>
+  <body lang="en-US">
+    <div class="container">
+      
+  <header class="row text-left title">
+    <h1 class="title">Set up a Subversion Server in EC2</h1>
+  </header>
+
+  <section id="category-pane" class="row meta">
+    
+    <div class="col-md-12">
+      <h6 class="text-left meta">
+         PUBLISHED ON DEC 24, 2011 
+        
+      </h6>
+    </div>
+    
+  </section>
+
+  <section id="content-pane" class="row">
+    <div class="col-md-12 text-justify content">
+      
+
+<p>I recently wanted to setup a subversion server. Initially I thought of using
+Beanstalk since they handle pretty much everything for you for a very small
+monthly fee. However, I thought I might set up my own server in order to learn
+the process.</p>
+
+<p>I found a few online resources that outlined the process, but none of them were
+exactly what I needed, so I decided to write this post to go over the steps in
+detail. Hopefully this helps!</p>
+
+<p>The steps we are going to take:</p>
+
+<ul>
+<li>Create a KeyPair, Security Group and Elastic IP in AWS</li>
+<li>Create a new Micro instance (64-bit Linux) in AWS</li>
+<li>Connect to the new instance using SSH</li>
+<li>Install a few tools on our new instance</li>
+<li>Create directories for repositories and auth settings</li>
+<li>Configure apache for servicing SVN requests</li>
+<li>Try it out</li>
+</ul>
+
+<h2 id="getting-set-up-in-aws">Getting Set Up in AWS</h2>
+
+<p>The first step is to login to the AWS Management Console.</p>
+
+<ul>
+<li>On the left side of the screen under Network and Security, select KeyPairs.</li>
+<li>Create a new Key Pair called <code>SVN</code> - this will create the key pair and initiate a download. Store this key in a safe place - i.e. do not lose it!</li>
+</ul>
+
+<p>Next, click on Security Groups (under Network and Security)</p>
+
+<ul>
+<li>Click Create Security Group</li>
+<li>Call it Web (Linux) and set the description to Subversion and HTTP</li>
+<li>Once it&rsquo;s been created, select the new group and click the Inbound tab (bottom of the screen)</li>
+<li>Add three inbound rules, SSH (22), HTTP (80), HTTPS (443)</li>
+<li>Apply your changes</li>
+</ul>
+
+<p>Ok, now we have the &ldquo;firewall&rdquo; rules setup and a KeyPair (used to connect via SSH) to connect to an instance. Now we need to create a new server instance in EC2.</p>
+
+<ul>
+<li>On the left menu under Instances, select instances</li>
+<li>From the toolbar select Launch Instance</li>
+<li>Choose Launch Classic Wizard and click continue</li>
+<li>From the QuickStart tab, choose Basic 64-bit Amazon Linux AMI</li>
+<li>On the next screen, set the Number of Instances to 1, the Instance Type to &ldquo;Micro&rdquo; and click Continue</li>
+<li>From the Advanced Instance Options screen, leave all the defaults and click continue</li>
+<li>Add any tags you want and click continue</li>
+<li>On the next screen, select the KeyPair we created earlier and click continue</li>
+<li>From the Configure Firewall screen, select the Security Group we created earlier</li>
+<li>Click next/continue until the instance is created</li>
+</ul>
+
+<p>We now want to connect and Elastic IP to our instance (this must be done every time you start the instance&hellip;Amazon doesn&rsquo;t automate this at all).</p>
+
+<ul>
+<li>From the left menu under Network and Security, select Elastic IPs</li>
+<li>Click Allocate New Address from the toolbar and click Yes when prompted</li>
+<li>Right click on the new IP address and select &ldquo;associate&rdquo; from the menu</li>
+<li>Select your new instance from the list</li>
+</ul>
+
+<p>The last step would be to create an A record on your DNS server for the new IP. For the purposes of this article I&rsquo;m going to assume that you&rsquo;ve done this step, however while going through the rest of this post, you can simply replace <code>&lt;domain&gt;</code> with your Elastic IP address supplied by Amazon and get the same results.</p>
+
+<h2 id="connecting-to-your-new-instance">Connecting to Your New Instance</h2>
+
+<p>Now that we&rsquo;ve got the server all setup in AWS, we need to connect to our new server and install some applications that will make things a little easier to work with.</p>
+
+<p>There are loads of SSH applications out there that will let you use SSH from Windows (my preference is Putty - and it&rsquo;s free). If you&rsquo;re connecting from a Mac or any &lsquo;nix system, SSH is already built-in. For this article, I&rsquo;ll assume we&rsquo;re using a Mac/Nix installation. If you&rsquo;re using Windows, <a href="http://www.powercram.com/2009/07/connecting-to-aws-ec2-instance-linux.html">check out this post</a> on connecting to EC2 with Putty.</p>
+
+<p>Connecting from a Console</p>
+
+<ol>
+<li>If you&rsquo;re using a Mac, you will need to open a terminal (<code>Applications-&gt;Utilities-&gt;Terminal</code>)</li>
+<li>If you&rsquo;re using Nix, I assume you know how to open a terminal window :)</li>
+<li>cd to the directory where you saved the KeyPair file (.pem) we created ealier</li>
+<li>Change the permissions of this file (to stop SSH from complaining about it): <code>sudo chmod 600 <keypair></code></li>
+<li>Type command: <code>ssh -i <keypair> ec2-user@<domain></code> where <keypair> is the KeyPair file we created ealier and <domain> is to host you pointed to the Elastic IP (can be an IP address if you like)</li>
+<li>The first time you connect, you might get a warning about trusting a certificate&hellip;type or select yes when prompted</li>
+</ol>
+
+<h2 id="you-re-in-now-what">You&rsquo;re In! Now what?</h2>
+
+<p>Now that we&rsquo;re connected to the instance, we need to install a few things. I should note, I&rsquo;m a big fan of emacs, so I always install it. If you&rsquo;re not familiar with Unix editors, stick to pico to keep things simple. For the remainder of this article, I&rsquo;ll use the word editor to refer to your preferred editor of choice on Linux.</p>
+
+<p>Run the following commands to install subversion and svnserve.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo yum install mod_dav_svn subversion</code></pre></div>
+
+<p>Next we&rsquo;re going to create a few new folders:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo mkdir -p /data/svn/repos /data/svn/logins /data/svn/scripts
+$ sudo chown -R apache.apache /data/svn</code></pre></div>
+
+<p>Now we need to create a subversion account to use for connecting to a repository. To do this we are going to create a new auth file and the create a script to handle adding new users in the future. To do this, run the following commands:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ cd /data/svn/logins
+$ sudo htpasswd -cm svn-auth-conf</code></pre></div>
+
+<p>We should now make the login file a little more secure by running <code>sudo chmod 600 svn-auth-conf</code>. Next, we&rsquo;re going to create a script called create_user.sh that we can use to add user&rsquo;s in the future. This will make sure that we don&rsquo;t forget the commands and also ensure that we don&rsquo;t accidentally include -c again which will create a new file (overriding anything existing) - bad.</p>
+
+<p>Using your editor, create the following script (in <code>/data/svn/scripts</code>), save it to a file called create_user.sh and then run sudo chmod +x create_user.sh to add execute rights to the file.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>user_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span>
+auth_file<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;../logins/svn-auth-conf&#34;</span>
+
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> <span style="color:#e6db74">&#34;</span>$user_name<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34; ]; then
+</span><span style="color:#e6db74">    echo -n &#34;</span>Enter user name: <span style="color:#e6db74">&#34;
+</span><span style="color:#e6db74">    read user_name
+</span><span style="color:#e6db74">fi
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">chmod 700 </span>$auth_file<span style="color:#e6db74">
+</span><span style="color:#e6db74">if [ </span>$?<span style="color:#e6db74"> -eq 0 ]; then
+</span><span style="color:#e6db74">    htpasswd -m </span>$auth_file<span style="color:#e6db74"> </span>$user_name<span style="color:#e6db74">
+</span><span style="color:#e6db74">    chmod 600 </span>$auth_file<span style="color:#e6db74">
+</span><span style="color:#e6db74">fi</span></code></pre></div>
+
+<p>We can use this script by passing in a username or allowing the script to prompt us for one:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo ./create_user.sh davidmuto
+<span style="color:#75715e"># or
+</span><span style="color:#75715e"></span>$ sudo ./create_user.sh</code></pre></div>
+
+<p>Now we need a script that allows us to create repositories. The reason we make this a script is to save us from retyping the same commands every time we create a repo (very prone to error). Here&rsquo;s a script that will create a repository and set all of the necessary permissions on the files for being served by apache.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>repo_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span>
+path_to_repo<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">if [ &#34;</span>$repo_name<span style="color:#e6db74">&#34; = &#34;</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+    echo -n <span style="color:#e6db74">&#34;What should the repo be called?: &#34;</span>
+    read repo_name
+<span style="color:#66d9ef">fi</span>
+
+path_to_repo<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;../repos/</span>$repo_name<span style="color:#e6db74">&#34;</span>
+svnadmin create $path_to_repo
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $? -eq <span style="color:#ae81ff">0</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+    sudo chown -R apache.apache $path_to_repo
+    sudo chcon -R -t httpd_sys_content_t $path_to_repo
+    echo <span style="color:#e6db74">&#34;Successfully create repo &#39;</span>$path_to_repo<span style="color:#e6db74">&#39;&#34;</span>
+<span style="color:#66d9ef">else</span>
+    echo <span style="color:#e6db74">&#34;Could not create repository </span>$path_to_repo<span style="color:#e6db74">&#34;</span>
+<span style="color:#66d9ef">fi</span></code></pre></div>
+
+<h2 id="the-final-step">The Final Step!</h2>
+
+<p>Our last step it to set up the apache config file for servicing subversion repo requests.</p>
+
+<ul>
+<li>Navigate to /etc/httpd/conf.g</li>
+<li>Using your editor open the subversion.conf file for editing (much be run using sudo, e.g. sudo emacs subversion.conf or sudo vi subversino.conf)</li>
+
+<li><p>Add the following Location element to the file</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    &lt;Location /&gt;
+      DAV svn
+      SVNParentPath /data/svn/repos
+      AuthType Basic
+      AuthName <span style="color:#e6db74">&#34;My Subversion Realm&#34;</span>
+      AuthUserFile /data/svn/logins/svn-auth-conf
+      Require valid-user
+    &lt;/Location&gt;
+    </code></pre></div></li>
+
+<li><p>Restart the apache service: sudo service httpd restart</p></li>
+</ul>
+
+<h2 id="testing-it-out">Testing it Out</h2>
+
+<p>Now let&rsquo;s run through the process of creating a new repo and connecting to it.</p>
+
+<ul>
+<li>Navigate to <code>/data/svn/scripts</code></li>
+<li>Create a user (if needed): <code>sudo ./create_user.sh [user_name]</code></li>
+<li>Create a new repo: <code>sudo ./create_repo.sh [repo_name]</code></li>
+<li>Using your favourite subversion client, checkout your new repo at <code>http://&lt;domain&gt;/&lt;repo_name&gt;</code>;</li>
+</ul>
+
+<p>I hope this posts helps someone in need. If you guys notice anything I&rsquo;ve missed, please feel free to let me know and I&rsquo;ll update this post as needed.</p>
+
+<p><strong>Happy Coding!</strong></p>
+
+    </div>
+  </section>
+
+  <section id="tag-pane" class="row meta">
+    
+    <div class="col-md-12">
+      <h6 class="text-right meta">
+        
+        
+        
+        TAGS:
+        
+        
+        <a class="meta" href="/tags/dev-ops">DEV OPS</a>, 
+        
+        <a class="meta" href="/tags/source-control">SOURCE CONTROL</a>, 
+        
+        <a class="meta" href="/tags/subversion">SUBVERSION</a>
+        
+        
+        
+      </h6>
+    </div>
+    
+  </section>
+
+  <section id="menu-pane" class="row menu text-center">
+  
+  
+  <span><a class="menu-item" href="https://pseudomuto.com/2011/07/nsdate-from-odata/">&lt; prev | </a></span>
+  
+  
+  <span><a class="menu-item" href="/blog">blog</a></span>
+  
+  
+  <span><a class="menu-item" href="https://pseudomuto.com/2012/02/efficient-thread-safe-caching-with-asp.net/"> | next &gt;</a></span>
+  
+  
+  <h4 class="text-center"><a class="menu-item" href="https://pseudomuto.com/">home</a></h4>
+</section>
+
+
+
+      <footer>
+        <hr>
+        <h6 class="text-center copyright">Copyright &copy; 2018 pseudomuto.com. All rights reserved.</h6>
+      </footer>
+    </div>
+
+    
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-43533697-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </body>
+</html>
