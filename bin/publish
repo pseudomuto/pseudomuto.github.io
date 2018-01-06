@@ -1,7 +1,0 @@
-#!/bin/bash
-set -euo pipefail
-
-echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
-hugo -t pseudomuto
-git add -A && git commit -m "publish at `date`"
-git push origin master
