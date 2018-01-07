@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+<meta name="generator" content="Hugo 0.32" />
+
+
+    <title>Threading | pseudomuto.com</title>
+
+    <base href="https://pseudomuto.com/">
+<link rel="canonical" href="https://pseudomuto.com/tags/threading/">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400|Roboto+Slab:400,700|Roboto:300,300i,400,400i,500,500i,700,700i">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://pseudomuto.com/css/theme.css">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="Page%28%22Threading%22%29" rel="alternate" type="application/rss+xml" title="pseudomuto.com" />
+<link href="Page%28%22Threading%22%29" rel="feed" type="application/rss+xml" title="pseudomuto.com" />
+
+
+  </head>
+  <body lang="en-US">
+    <div class="container">
+      
+  <section id="list-pane" class="row list">
+    <ul >
+      
+      <li class="list-entry">
+        <a class="list-entry-link" href="https://pseudomuto.com/2014/03/dining-philosophers-in-c/">Dining Philosophers in C</a>
+        <p class="meta">
+           Published on MAR 1, 2014 
+          <span class="category">about a 4 minute read</span>
+        </p>
+        <p class="excerpt">
+        In a recent bout of insanity, I thought it would be cool to play around with concurrency in pure C. Nothing crazy, maybe controlling access to a shared resource and a semaphore or two for good measure.
+Since I assumed this would be no easy feat in C, I deciced I&rsquo;d start with a problem I knew. So I went with the dining philosophers problem.
+Defining the Problem There are five (can be adjusted) philosophers sitting around a round table.
+        </p>
+        
+        
+        
+        <p class="meta">
+          
+          <a href="/tags/algorithms/" class="category">ALGORITHMS</a>, 
+          
+          <a href="/tags/c/" class="category">C</a>, 
+          
+          <a href="/tags/threading/" class="category">THREADING</a>
+          
+        </p>
+        
+      </li>
+      
+      <li class="list-entry">
+        <a class="list-entry-link" href="https://pseudomuto.com/2012/02/efficient-thread-safe-caching-with-asp.net/">Efficient, Thread-Safe Caching with ASP.NET</a>
+        <p class="meta">
+           Published on FEB 27, 2012 
+          <span class="category">about a 3 minute read</span>
+        </p>
+        <p class="excerpt">
+        Let me start by saying that I’ve made this mistake on many occasions in the past. I just assume that static/shared objects are thread-safe. Things like HttpContext.Current.Cache&hellip;OOPS!
+A typical implementation of a cache lookup might look like this:
+ Let’s analyze this code in a little detail. Here are the steps performed:
+ Load the object from the Cache If the object is null (not found)  Create the object and store it in the cache  Return the object back to the caller  To start, we should ask, what happens if 10 simultaneous requests come through attempting to get to the cache object?
+        </p>
+        
+        
+        
+        <p class="meta">
+          
+          <a href="/tags/.net/" class="category">.NET</a>, 
+          
+          <a href="/tags/caching/" class="category">CACHING</a>, 
+          
+          <a href="/tags/threading/" class="category">THREADING</a>
+          
+        </p>
+        
+      </li>
+      
+    </ul>
+  </section>
+
+  <section id="menu-pane" class="row menu text-center">
+  
+  <h4 class="text-center"><a class="menu-item" href="https://pseudomuto.com/">home</a></h4>
+</section>
+
+
+
+      <footer>
+        <hr>
+        <h6 class="text-center copyright">Copyright &copy; 2018 pseudomuto.com. All rights reserved.</h6>
+      </footer>
+    </div>
+
+    
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-43533697-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-521a7d057b074526"></script>
+    <script type="text/javascript">
+      addthis.layers({ 'theme': 'transparent', 'share': { 'numPreferredServices': 5 } });
+    </script>
+    
+  </body>
+</html>

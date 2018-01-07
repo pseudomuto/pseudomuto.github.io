@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mvc on pseudomuto.com</title>
+    <link>https://pseudomuto.com/tags/mvc/</link>
+    <description>Recent content in Mvc on pseudomuto.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Copyright &amp;copy; 2018 pseudomuto.com. All rights reserved.</copyright>
+    <lastBuildDate>Fri, 09 Mar 2012 14:57:32 -0500</lastBuildDate>
+    
+	<atom:link href="https://pseudomuto.com/tags/mvc/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>MVC Razor Helpers using Delegates</title>
+      <link>https://pseudomuto.com/2012/03/mvc-razor-helpers-using-delegates/</link>
+      <pubDate>Fri, 09 Mar 2012 14:57:32 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/2012/03/mvc-razor-helpers-using-delegates/</guid>
+      <description>Once in a while, I find myself implementing the same helper functions in different pages. In an effort to not repeat myself, I generally move helper functions into a common cshtml file in App_Code (as suggested here).
+While this works great for a single application, I’ve found myself copying helpers from project to project.
+So in order to avoid the copy-paste nightmare, I decided to see if I could abstract the basic functionality into an extension method and then have application specific rendering.</description>
+    </item>
+    
+    <item>
+      <title>Showing Enums as a Select List in MVC and Razor</title>
+      <link>https://pseudomuto.com/2011/07/showing-enums-as-a-select-list-in-mvc-and-razor/</link>
+      <pubDate>Wed, 27 Jul 2011 16:03:55 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/2011/07/showing-enums-as-a-select-list-in-mvc-and-razor/</guid>
+      <description>Recently I needed to show a drop down list of all of the enumeration values. So I did what we all do and hit up Google. While there was plenty of information out there detailing how to convert the enum to a Dictionary&amp;lt;int, string&amp;gt; and render it, I couldn&amp;rsquo;t find something that fit my needs.
+Essentially I have an enumeration of field types. I wanted to display the names of those fields in a drop down list, but be able to make some of them prettier.</description>
+    </item>
+    
+    <item>
+      <title>Global Namespace Includes with MVC and Razor</title>
+      <link>https://pseudomuto.com/2011/03/global-namespace-includes-with-mvc-and-razor/</link>
+      <pubDate>Mon, 07 Mar 2011 00:00:00 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/2011/03/global-namespace-includes-with-mvc-and-razor/</guid>
+      <description>While I&amp;rsquo;m loving MVC3 and the Razor view engine, I was sorely disappointed when I couldn&amp;rsquo;t use the system.web/pages/namespaces collection in web.config to add global namespace includes.
+After a bit of hunting and looking through the web.config files underneath the views folder (in each Area), I found that this can be accomplished by adding the following to the root web.config file:
+ Now you can add any namespaces you require under the new razor namespaces section.</description>
+    </item>
+    
+  </channel>
+</rss>

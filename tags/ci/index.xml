@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ci on pseudomuto.com</title>
+    <link>https://pseudomuto.com/tags/ci/</link>
+    <description>Recent content in Ci on pseudomuto.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Copyright &amp;copy; 2018 pseudomuto.com. All rights reserved.</copyright>
+    <lastBuildDate>Tue, 13 Aug 2013 17:07:53 -0500</lastBuildDate>
+    
+	<atom:link href="https://pseudomuto.com/tags/ci/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Continuous Integration for .NET with Travis CI and xUnit</title>
+      <link>https://pseudomuto.com/2013/08/continuous-integration-for-.net-with-travis-ci-and-xunit/</link>
+      <pubDate>Tue, 13 Aug 2013 17:07:53 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/2013/08/continuous-integration-for-.net-with-travis-ci-and-xunit/</guid>
+      <description>For this post, I&amp;rsquo;m going to go over getting a simple CI environment setup using Travis CI and xUnit.
+If you&amp;rsquo;re one of those people that just wants to see the code, click here!
+Our goal is to have the following scenario: whenever a push happens (to any branch) on GitHub, a build of the app will be triggered by Travis CI. If the build succeeds, it will run all of the unit tests for your app.</description>
+    </item>
+    
+  </channel>
+</rss>

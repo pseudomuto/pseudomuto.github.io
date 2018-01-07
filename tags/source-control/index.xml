@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Source Control on pseudomuto.com</title>
+    <link>https://pseudomuto.com/tags/source-control/</link>
+    <description>Recent content in Source Control on pseudomuto.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Copyright &amp;copy; 2018 pseudomuto.com. All rights reserved.</copyright>
+    <lastBuildDate>Sat, 24 Dec 2011 20:21:47 -0500</lastBuildDate>
+    
+	<atom:link href="https://pseudomuto.com/tags/source-control/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Set up a Subversion Server in EC2</title>
+      <link>https://pseudomuto.com/2011/12/set-up-a-subversion-server-in-ec2/</link>
+      <pubDate>Sat, 24 Dec 2011 20:21:47 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/2011/12/set-up-a-subversion-server-in-ec2/</guid>
+      <description>I recently wanted to setup a subversion server. Initially I thought of using Beanstalk since they handle pretty much everything for you for a very small monthly fee. However, I thought I might set up my own server in order to learn the process.
+I found a few online resources that outlined the process, but none of them were exactly what I needed, so I decided to write this post to go over the steps in detail.</description>
+    </item>
+    
+  </channel>
+</rss>

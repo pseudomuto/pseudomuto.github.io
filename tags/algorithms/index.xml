@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Algorithms on pseudomuto.com</title>
+    <link>https://pseudomuto.com/tags/algorithms/</link>
+    <description>Recent content in Algorithms on pseudomuto.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Copyright &amp;copy; 2018 pseudomuto.com. All rights reserved.</copyright>
+    <lastBuildDate>Sat, 01 Mar 2014 17:03:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://pseudomuto.com/tags/algorithms/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Dining Philosophers in C</title>
+      <link>https://pseudomuto.com/2014/03/dining-philosophers-in-c/</link>
+      <pubDate>Sat, 01 Mar 2014 17:03:00 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/2014/03/dining-philosophers-in-c/</guid>
+      <description>In a recent bout of insanity, I thought it would be cool to play around with concurrency in pure C. Nothing crazy, maybe controlling access to a shared resource and a semaphore or two for good measure.
+Since I assumed this would be no easy feat in C, I deciced I&amp;rsquo;d start with a problem I knew. So I went with the dining philosophers problem.
+Defining the Problem There are five (can be adjusted) philosophers sitting around a round table.</description>
+    </item>
+    
+  </channel>
+</rss>

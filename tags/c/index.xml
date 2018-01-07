@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C on pseudomuto.com</title>
+    <link>https://pseudomuto.com/tags/c/</link>
+    <description>Recent content in C on pseudomuto.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Copyright &amp;copy; 2018 pseudomuto.com. All rights reserved.</copyright>
+    <lastBuildDate>Sat, 01 Mar 2014 17:03:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://pseudomuto.com/tags/c/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Dining Philosophers in C</title>
+      <link>https://pseudomuto.com/2014/03/dining-philosophers-in-c/</link>
+      <pubDate>Sat, 01 Mar 2014 17:03:00 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/2014/03/dining-philosophers-in-c/</guid>
+      <description>In a recent bout of insanity, I thought it would be cool to play around with concurrency in pure C. Nothing crazy, maybe controlling access to a shared resource and a semaphore or two for good measure.
+Since I assumed this would be no easy feat in C, I deciced I&amp;rsquo;d start with a problem I knew. So I went with the dining philosophers problem.
+Defining the Problem There are five (can be adjusted) philosophers sitting around a round table.</description>
+    </item>
+    
+    <item>
+      <title>Implementing a Generic Stack in C</title>
+      <link>https://pseudomuto.com/2013/06/implementing-a-generic-stack-in-c/</link>
+      <pubDate>Wed, 19 Jun 2013 22:02:15 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/2013/06/implementing-a-generic-stack-in-c/</guid>
+      <description>In a previous post I went over how we could create a generic linked list implementation in C which would allow the caller to determine that type of information stored in the list (via a void *).
+In accordance with my desire to share and the nerdy, sadistic, love/hate relationship I have with C, I&amp;rsquo;m going to cover how we can use the linked list code from the previous post to create a generic stack implementation with very little effort.</description>
+    </item>
+    
+    <item>
+      <title>Implementing a Generic Linked List in C</title>
+      <link>https://pseudomuto.com/2013/05/implementing-a-generic-linked-list-in-c/</link>
+      <pubDate>Thu, 02 May 2013 12:35:10 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/2013/05/implementing-a-generic-linked-list-in-c/</guid>
+      <description>Because I am a totally shameless nerd, I find myself writing applications in C from time to time just to make sure I still can. Aside from iOS development, I rarely have to work with C directly (without the help of a superset like C++ or Objective-C), but every once in a while I like to try and challenge myself to write an application in pure C.
+I&amp;rsquo;ve found that doing this has led to a much more profound understanding of modern languages and has really opened my eyes to the challenges faced by developers who write their own languages or work with compiler optimization (I know a few&amp;hellip;it sounds like tough work!</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vagrant on pseudomuto.com</title>
+    <link>https://pseudomuto.com/tags/vagrant/</link>
+    <description>Recent content in Vagrant on pseudomuto.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Copyright &amp;copy; 2018 pseudomuto.com. All rights reserved.</copyright>
+    <lastBuildDate>Sat, 27 Dec 2014 17:03:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://pseudomuto.com/tags/vagrant/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Running Rails Inside Vagrant</title>
+      <link>https://pseudomuto.com/2014/12/running-rails-inside-vagrant/</link>
+      <pubDate>Sat, 27 Dec 2014 17:03:00 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/2014/12/running-rails-inside-vagrant/</guid>
+      <description>I use vagrant (along with chef, a vagrant plugin and my dotfiles) for my development environment. I do this for a number of reasons, but mostly, I find it&amp;rsquo;s the easiest way to get everything installed and configured properly regardless of which physical box I&amp;rsquo;m working on.
+There are a number of issues I needed to address to get this all working. One of those, was getting a simple rails server from inside the VM to be available from my host&amp;rsquo;s browser.</description>
+    </item>
+    
+  </channel>
+</rss>

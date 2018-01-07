@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Testing on pseudomuto.com</title>
+    <link>https://pseudomuto.com/tags/testing/</link>
+    <description>Recent content in Testing on pseudomuto.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Copyright &amp;copy; 2018 pseudomuto.com. All rights reserved.</copyright>
+    <lastBuildDate>Sat, 24 Aug 2013 17:07:53 -0500</lastBuildDate>
+    
+	<atom:link href="https://pseudomuto.com/tags/testing/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Drying Out Specs With Shared Examples</title>
+      <link>https://pseudomuto.com/2013/08/drying-out-specs-with-shared-examples/</link>
+      <pubDate>Sat, 24 Aug 2013 17:07:53 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/2013/08/drying-out-specs-with-shared-examples/</guid>
+      <description>I generally find that most developers are fairly aware of and willing to apply the DRY principal on their main codebase. However, when I look through people&amp;rsquo;s tests, I find that the old copy/paste habit has found it&amp;rsquo;s way into their workflow (again?).
+I&amp;rsquo;m using &amp;ldquo;their code&amp;rdquo; to save face here&amp;hellip;I found this in my own code and started looking for ways to clean it up.
+So, let&amp;rsquo;s take a look at an example of how we can remove some duplication from our specs.</description>
+    </item>
+    
+    <item>
+      <title>Testing EmberJS Apps with Rails and QUnit</title>
+      <link>https://pseudomuto.com/2013/07/testing-emberjs-apps-with-rails-and-qunit/</link>
+      <pubDate>Sun, 28 Jul 2013 04:31:04 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/2013/07/testing-emberjs-apps-with-rails-and-qunit/</guid>
+      <description>I recently started playing around with EmberJS. While I was insanely impressed with how easy it was to get a single-page app up and running, I was having difficulty getting QUnit setup correctly.
+After some finagling I was able to get it working. In my particular case I&amp;rsquo;m using Ruby 2.0.0 and Rails 4.0.0, though I&amp;rsquo;m sure this same setup would work with previous versions with minimal (if any) tweaks.</description>
+    </item>
+    
+  </channel>
+</rss>

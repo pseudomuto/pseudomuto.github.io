@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ios on pseudomuto.com</title>
+    <link>https://pseudomuto.com/tags/ios/</link>
+    <description>Recent content in Ios on pseudomuto.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Copyright &amp;copy; 2018 pseudomuto.com. All rights reserved.</copyright>
+    <lastBuildDate>Fri, 29 Jul 2011 20:50:09 -0500</lastBuildDate>
+    
+	<atom:link href="https://pseudomuto.com/tags/ios/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>NSDate From OData</title>
+      <link>https://pseudomuto.com/2011/07/nsdate-from-odata/</link>
+      <pubDate>Fri, 29 Jul 2011 20:50:09 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/2011/07/nsdate-from-odata/</guid>
+      <description>Recently I&amp;rsquo;ve been working on an iOS project that loads data that we publish via the Open Data Protocol.
+At first everything was working perfectly. I was using JSONKit and NSOperation to download and process the information. That was until I had to get a DateTime object&amp;hellip;which resulted in an epic fail!
+It turns out that WCF Data Services publish DateTime objects as a new Date object represented by the time in milliseconds (not seconds) since January 1, 1970.</description>
+    </item>
+    
+  </channel>
+</rss>

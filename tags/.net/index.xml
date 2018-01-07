@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>.Net on pseudomuto.com</title>
+    <link>https://pseudomuto.com/tags/.net/</link>
+    <description>Recent content in .Net on pseudomuto.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Copyright &amp;copy; 2018 pseudomuto.com. All rights reserved.</copyright>
+    <lastBuildDate>Tue, 13 Aug 2013 17:07:53 -0500</lastBuildDate>
+    
+	<atom:link href="https://pseudomuto.com/tags/.net/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Continuous Integration for .NET with Travis CI and xUnit</title>
+      <link>https://pseudomuto.com/2013/08/continuous-integration-for-.net-with-travis-ci-and-xunit/</link>
+      <pubDate>Tue, 13 Aug 2013 17:07:53 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/2013/08/continuous-integration-for-.net-with-travis-ci-and-xunit/</guid>
+      <description>For this post, I&amp;rsquo;m going to go over getting a simple CI environment setup using Travis CI and xUnit.
+If you&amp;rsquo;re one of those people that just wants to see the code, click here!
+Our goal is to have the following scenario: whenever a push happens (to any branch) on GitHub, a build of the app will be triggered by Travis CI. If the build succeeds, it will run all of the unit tests for your app.</description>
+    </item>
+    
+    <item>
+      <title>MVC Razor Helpers using Delegates</title>
+      <link>https://pseudomuto.com/2012/03/mvc-razor-helpers-using-delegates/</link>
+      <pubDate>Fri, 09 Mar 2012 14:57:32 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/2012/03/mvc-razor-helpers-using-delegates/</guid>
+      <description>Once in a while, I find myself implementing the same helper functions in different pages. In an effort to not repeat myself, I generally move helper functions into a common cshtml file in App_Code (as suggested here).
+While this works great for a single application, I’ve found myself copying helpers from project to project.
+So in order to avoid the copy-paste nightmare, I decided to see if I could abstract the basic functionality into an extension method and then have application specific rendering.</description>
+    </item>
+    
+    <item>
+      <title>Efficient, Thread-Safe Caching with ASP.NET</title>
+      <link>https://pseudomuto.com/2012/02/efficient-thread-safe-caching-with-asp.net/</link>
+      <pubDate>Mon, 27 Feb 2012 18:55:34 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/2012/02/efficient-thread-safe-caching-with-asp.net/</guid>
+      <description>Let me start by saying that I’ve made this mistake on many occasions in the past. I just assume that static/shared objects are thread-safe. Things like HttpContext.Current.Cache&amp;hellip;OOPS!
+A typical implementation of a cache lookup might look like this:
+ Let’s analyze this code in a little detail. Here are the steps performed:
+ Load the object from the Cache If the object is null (not found)  Create the object and store it in the cache  Return the object back to the caller  To start, we should ask, what happens if 10 simultaneous requests come through attempting to get to the cache object?</description>
+    </item>
+    
+    <item>
+      <title>Showing Enums as a Select List in MVC and Razor</title>
+      <link>https://pseudomuto.com/2011/07/showing-enums-as-a-select-list-in-mvc-and-razor/</link>
+      <pubDate>Wed, 27 Jul 2011 16:03:55 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/2011/07/showing-enums-as-a-select-list-in-mvc-and-razor/</guid>
+      <description>Recently I needed to show a drop down list of all of the enumeration values. So I did what we all do and hit up Google. While there was plenty of information out there detailing how to convert the enum to a Dictionary&amp;lt;int, string&amp;gt; and render it, I couldn&amp;rsquo;t find something that fit my needs.
+Essentially I have an enumeration of field types. I wanted to display the names of those fields in a drop down list, but be able to make some of them prettier.</description>
+    </item>
+    
+    <item>
+      <title>Global Namespace Includes with MVC and Razor</title>
+      <link>https://pseudomuto.com/2011/03/global-namespace-includes-with-mvc-and-razor/</link>
+      <pubDate>Mon, 07 Mar 2011 00:00:00 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/2011/03/global-namespace-includes-with-mvc-and-razor/</guid>
+      <description>While I&amp;rsquo;m loving MVC3 and the Razor view engine, I was sorely disappointed when I couldn&amp;rsquo;t use the system.web/pages/namespaces collection in web.config to add global namespace includes.
+After a bit of hunting and looking through the web.config files underneath the views folder (in each Area), I found that this can be accomplished by adding the following to the root web.config file:
+ Now you can add any namespaces you require under the new razor namespaces section.</description>
+    </item>
+    
+  </channel>
+</rss>

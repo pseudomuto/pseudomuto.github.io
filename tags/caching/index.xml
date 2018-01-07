@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Caching on pseudomuto.com</title>
+    <link>https://pseudomuto.com/tags/caching/</link>
+    <description>Recent content in Caching on pseudomuto.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Copyright &amp;copy; 2018 pseudomuto.com. All rights reserved.</copyright>
+    <lastBuildDate>Mon, 27 Feb 2012 18:55:34 -0500</lastBuildDate>
+    
+	<atom:link href="https://pseudomuto.com/tags/caching/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Efficient, Thread-Safe Caching with ASP.NET</title>
+      <link>https://pseudomuto.com/2012/02/efficient-thread-safe-caching-with-asp.net/</link>
+      <pubDate>Mon, 27 Feb 2012 18:55:34 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/2012/02/efficient-thread-safe-caching-with-asp.net/</guid>
+      <description>Let me start by saying that I’ve made this mistake on many occasions in the past. I just assume that static/shared objects are thread-safe. Things like HttpContext.Current.Cache&amp;hellip;OOPS!
+A typical implementation of a cache lookup might look like this:
+ Let’s analyze this code in a little detail. Here are the steps performed:
+ Load the object from the Cache If the object is null (not found)  Create the object and store it in the cache  Return the object back to the caller  To start, we should ask, what happens if 10 simultaneous requests come through attempting to get to the cache object?</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ruby on pseudomuto.com</title>
+    <link>https://pseudomuto.com/tags/ruby/</link>
+    <description>Recent content in Ruby on pseudomuto.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Copyright &amp;copy; 2018 pseudomuto.com. All rights reserved.</copyright>
+    <lastBuildDate>Fri, 04 Sep 2015 17:03:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://pseudomuto.com/tags/ruby/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Monitoring Rails Requests with StatsD</title>
+      <link>https://pseudomuto.com/2015/09/monitoring-rails-requests-with-statsd/</link>
+      <pubDate>Fri, 04 Sep 2015 17:03:00 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/2015/09/monitoring-rails-requests-with-statsd/</guid>
+      <description>Monitoring your application is important - full stop. When the response time plummet&amp;rsquo;s you want to know before your customers do&amp;hellip;and certainly before you bother to check your twitter feed.
+There are lots of options here, and a lot of them require a ton of upfront investment in terms of time and effort. However, a simple way to get started is to simply log total request durations and track the number of successful and failed responses.</description>
+    </item>
+    
+    <item>
+      <title>Drying Out Specs With Shared Examples</title>
+      <link>https://pseudomuto.com/2013/08/drying-out-specs-with-shared-examples/</link>
+      <pubDate>Sat, 24 Aug 2013 17:07:53 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/2013/08/drying-out-specs-with-shared-examples/</guid>
+      <description>I generally find that most developers are fairly aware of and willing to apply the DRY principal on their main codebase. However, when I look through people&amp;rsquo;s tests, I find that the old copy/paste habit has found it&amp;rsquo;s way into their workflow (again?).
+I&amp;rsquo;m using &amp;ldquo;their code&amp;rdquo; to save face here&amp;hellip;I found this in my own code and started looking for ways to clean it up.
+So, let&amp;rsquo;s take a look at an example of how we can remove some duplication from our specs.</description>
+    </item>
+    
+    <item>
+      <title>My First Ruby Brigade Meetup</title>
+      <link>https://pseudomuto.com/2013/08/my-first-ruby-brigade-meetup/</link>
+      <pubDate>Wed, 07 Aug 2013 04:31:04 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/2013/08/my-first-ruby-brigade-meetup/</guid>
+      <description>Last night I attended my first Ruby Brigade Meetup in Toronto and I have to admit…it was kinda fun!
+It was graciously hosted at Influitive’s downtown office on Adelaide St. When I got there I was happy to see some fancy boardrooms and a bunch of pairing stations for us to use. All in all, a great location.
+We got a little caught up in some general technology discussions so as expected we got started a little late.</description>
+    </item>
+    
+    <item>
+      <title>Testing EmberJS Apps with Rails and QUnit</title>
+      <link>https://pseudomuto.com/2013/07/testing-emberjs-apps-with-rails-and-qunit/</link>
+      <pubDate>Sun, 28 Jul 2013 04:31:04 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/2013/07/testing-emberjs-apps-with-rails-and-qunit/</guid>
+      <description>I recently started playing around with EmberJS. While I was insanely impressed with how easy it was to get a single-page app up and running, I was having difficulty getting QUnit setup correctly.
+After some finagling I was able to get it working. In my particular case I&amp;rsquo;m using Ruby 2.0.0 and Rails 4.0.0, though I&amp;rsquo;m sure this same setup would work with previous versions with minimal (if any) tweaks.</description>
+    </item>
+    
+    <item>
+      <title>Application Templates for Rails</title>
+      <link>https://pseudomuto.com/2012/12/application-templates-for-rails/</link>
+      <pubDate>Mon, 17 Dec 2012 19:29:43 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/2012/12/application-templates-for-rails/</guid>
+      <description>Frequently I find myself creating basic rails apps to demonstrate a new feature, or prototype something for a spike test. Every time I created an app, I would run rails new -T, then add RSpec, Cucumber, Haml, possibly Bootstrap, etc.
+After the 10th app in a month, I decided that there must be an easier way. Then I saw this post: http://everydayrails.com/2011/02/28/rails-3-application-templates.html
+I started reading up on generators and application templates, then I thought I&amp;rsquo;d write my own, to see how it works.</description>
+    </item>
+    
+  </channel>
+</rss>

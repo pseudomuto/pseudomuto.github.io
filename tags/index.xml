@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on pseudomuto.com</title>
+    <link>https://pseudomuto.com/tags/</link>
+    <description>Recent content in Tags on pseudomuto.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Copyright &amp;copy; 2018 pseudomuto.com. All rights reserved.</copyright>
+    <lastBuildDate>Tue, 13 Aug 2013 17:07:53 -0500</lastBuildDate>
+    
+	<atom:link href="https://pseudomuto.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>.Net</title>
+      <link>https://pseudomuto.com/tags/.net/</link>
+      <pubDate>Tue, 13 Aug 2013 17:07:53 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/tags/.net/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Algorithms</title>
+      <link>https://pseudomuto.com/tags/algorithms/</link>
+      <pubDate>Sat, 01 Mar 2014 17:03:00 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/tags/algorithms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Api</title>
+      <link>https://pseudomuto.com/tags/api/</link>
+      <pubDate>Mon, 07 Oct 2013 17:07:53 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/tags/api/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Automation</title>
+      <link>https://pseudomuto.com/tags/automation/</link>
+      <pubDate>Tue, 13 Aug 2013 17:07:53 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/tags/automation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>C</title>
+      <link>https://pseudomuto.com/tags/c/</link>
+      <pubDate>Sat, 01 Mar 2014 17:03:00 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/tags/c/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Caching</title>
+      <link>https://pseudomuto.com/tags/caching/</link>
+      <pubDate>Mon, 27 Feb 2012 18:55:34 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/tags/caching/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Chef</title>
+      <link>https://pseudomuto.com/tags/chef/</link>
+      <pubDate>Tue, 27 Jan 2015 17:03:00 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/tags/chef/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ci</title>
+      <link>https://pseudomuto.com/tags/ci/</link>
+      <pubDate>Tue, 13 Aug 2013 17:07:53 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/tags/ci/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Data Structures</title>
+      <link>https://pseudomuto.com/tags/data-structures/</link>
+      <pubDate>Wed, 19 Jun 2013 22:02:15 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/tags/data-structures/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dev Ops</title>
+      <link>https://pseudomuto.com/tags/dev-ops/</link>
+      <pubDate>Sat, 24 Dec 2011 20:21:47 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/tags/dev-ops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>https://pseudomuto.com/tags/git/</link>
+      <pubDate>Wed, 11 Dec 2013 17:07:53 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Github</title>
+      <link>https://pseudomuto.com/tags/github/</link>
+      <pubDate>Mon, 07 Oct 2013 17:07:53 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/tags/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ios</title>
+      <link>https://pseudomuto.com/tags/ios/</link>
+      <pubDate>Fri, 29 Jul 2011 20:50:09 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/tags/ios/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Javascript</title>
+      <link>https://pseudomuto.com/tags/javascript/</link>
+      <pubDate>Sun, 28 Jul 2013 04:31:04 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mvc</title>
+      <link>https://pseudomuto.com/tags/mvc/</link>
+      <pubDate>Fri, 09 Mar 2012 14:57:32 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/tags/mvc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nuget</title>
+      <link>https://pseudomuto.com/tags/nuget/</link>
+      <pubDate>Mon, 07 Oct 2013 17:07:53 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/tags/nuget/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Objective C</title>
+      <link>https://pseudomuto.com/tags/objective-c/</link>
+      <pubDate>Fri, 29 Jul 2011 20:50:09 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/tags/objective-c/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Odata</title>
+      <link>https://pseudomuto.com/tags/odata/</link>
+      <pubDate>Fri, 29 Jul 2011 20:50:09 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/tags/odata/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rails</title>
+      <link>https://pseudomuto.com/tags/rails/</link>
+      <pubDate>Fri, 04 Sep 2015 17:03:00 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/tags/rails/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Razor</title>
+      <link>https://pseudomuto.com/tags/razor/</link>
+      <pubDate>Wed, 27 Jul 2011 16:03:55 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/tags/razor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rspec</title>
+      <link>https://pseudomuto.com/tags/rspec/</link>
+      <pubDate>Sat, 24 Aug 2013 17:07:53 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/tags/rspec/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ruby</title>
+      <link>https://pseudomuto.com/tags/ruby/</link>
+      <pubDate>Fri, 04 Sep 2015 17:03:00 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/tags/ruby/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Shell</title>
+      <link>https://pseudomuto.com/tags/shell/</link>
+      <pubDate>Wed, 11 Dec 2013 17:07:53 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/tags/shell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Source Control</title>
+      <link>https://pseudomuto.com/tags/source-control/</link>
+      <pubDate>Sat, 24 Dec 2011 20:21:47 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/tags/source-control/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Subversion</title>
+      <link>https://pseudomuto.com/tags/subversion/</link>
+      <pubDate>Sat, 24 Dec 2011 20:21:47 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/tags/subversion/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Testing</title>
+      <link>https://pseudomuto.com/tags/testing/</link>
+      <pubDate>Sat, 24 Aug 2013 17:07:53 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/tags/testing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Threading</title>
+      <link>https://pseudomuto.com/tags/threading/</link>
+      <pubDate>Sat, 01 Mar 2014 17:03:00 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/tags/threading/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vagrant</title>
+      <link>https://pseudomuto.com/tags/vagrant/</link>
+      <pubDate>Sat, 27 Dec 2014 17:03:00 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/tags/vagrant/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vim</title>
+      <link>https://pseudomuto.com/tags/vim/</link>
+      <pubDate>Tue, 27 Jan 2015 17:03:00 -0500</pubDate>
+      
+      <guid>https://pseudomuto.com/tags/vim/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
