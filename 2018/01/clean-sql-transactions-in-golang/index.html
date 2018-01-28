@@ -64,8 +64,9 @@ transactions for most vendors. Typically, you&rsquo;ll write something like this
 <p><strong>Every transaction has to worry about the details</strong></p>
 
 <p>The flexibility of handling everything yourself can be nice, but its also a burden sometimes. For example, if one
-statement fails, the next move is to rollback, always. Similarly, I would be worried about forgetting to commit the
-transaction at some point (wouldn&rsquo;t be the first time).</p>
+statement fails, the next move is to rollback, almost always.</p>
+
+<p>Similarly, I would be worried about forgetting to commit the transaction at some point (wouldn&rsquo;t be the first time).</p>
 
 <p><strong>This kind of code seems like it should be a primitive in your codebase</strong></p>
 
@@ -75,6 +76,8 @@ primitives in your codebase to handle these.</p>
 <p>For example, a function like <code>FetchJSON(url string, params ...interface{}) error</code> can be used to set open/request
 timeouts and handle any application specific errors in the same way everywhere. Then you just call this method whenever
 you need to fetch some JSON.</p>
+
+<p>Managing db transactions seems to fit this case well.</p>
 
 <p><strong>Not all &ldquo;errors&rdquo; are covered</strong></p>
 
@@ -113,7 +116,11 @@ last insert id along with each call.</p>
 
 <script src="//gist.github.com/pseudomuto/0900a7a3605470760579752fcf0fc2b7.js?file=main_3.go"></script>
 
-<p>This seems much easier to read, and is certainly easy to replicate across your application. I&rsquo;m definitely interested in
+<p>This seems much easier to read, and is certainly simple to replicate across your application. Obviously, this doesn&rsquo;t
+cover every possible scenario, but putting something <em>like</em> this in place can really make your application&rsquo;s code nicer
+to read and ensure that you&rsquo;re handling error cases consistently.</p>
+
+<p>I&rsquo;m definitely interested in
 opinions, so please leave a comment if you&rsquo;ve got one!</p>
 
     </div>
