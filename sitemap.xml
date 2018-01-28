@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://pseudomuto.com/2018/01/clean-sql-transactions-in-golang/</loc>
+    <lastmod>2018-01-27T19:36:10-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://pseudomuto.com/2015/09/monitoring-rails-requests-with-statsd/</loc>
     <lastmod>2015-09-04T17:03:00-05:00</lastmod>
   </url>
@@ -128,7 +133,7 @@
   
   <url>
     <loc>https://pseudomuto.com/blog/</loc>
-    <lastmod>2015-09-04T17:03:00-05:00</lastmod>
+    <lastmod>2018-01-27T19:36:10-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -182,6 +187,12 @@
   <url>
     <loc>https://pseudomuto.com/tags/github/</loc>
     <lastmod>2013-10-07T17:07:53-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pseudomuto.com/tags/golang/</loc>
+    <lastmod>2018-01-27T19:36:10-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -295,7 +306,7 @@
   
   <url>
     <loc>https://pseudomuto.com/</loc>
-    <lastmod>2015-09-04T17:03:00-05:00</lastmod>
+    <lastmod>2018-01-27T19:36:10-05:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+<meta name="generator" content="Hugo 0.32" />
+
+
+    <title>Clean SQL Transactions in Golang | pseudomuto.com</title>
+
+    <base href="https://pseudomuto.com/">
+<link rel="canonical" href="https://pseudomuto.com/2018/01/clean-sql-transactions-in-golang/">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400|Roboto+Slab:400,700|Roboto:300,300i,400,400i,500,500i,700,700i">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://pseudomuto.com/css/theme.css">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+  </head>
+  <body lang="en-US">
+    <div class="container">
+      
+  <header class="row text-left title">
+    <h1 class="title">Clean SQL Transactions in Golang</h1>
+  </header>
+
+  <section id="category-pane" class="row meta">
+    
+    <div class="col-md-12">
+      <h6 class="text-left meta">
+         PUBLISHED ON JAN 27, 2018 
+        
+      </h6>
+    </div>
+    
+  </section>
+
+  <section id="content-pane" class="row">
+    <div class="col-md-12 text-justify content">
+      
+
+<blockquote>
+<p><strong>TL;DR</strong>: Working with db transactions in Go should be simple, so I made some utilities to help with that.
+You can see the gist containing <a href="https://gist.github.com/pseudomuto/0900a7a3605470760579752fcf0fc2b7">all the code here</a>.</p>
+</blockquote>
+
+<p>The <a href="https://golang.org/pkg/database/sql"><code>database/sql</code></a> package has everything you need in order to work with db
+transactions for most vendors. Typically, you&rsquo;ll write something like this:</p>
+
+<script src="//gist.github.com/pseudomuto/0900a7a3605470760579752fcf0fc2b7.js?file=main_1.go"></script>
+
+<p>While this code works, there are a few of things I think could be better about it.</p>
+
+<p><strong>Every transaction has to worry about the details</strong></p>
+
+<p>The flexibility of handling everything yourself can be nice, but its also a burden sometimes. For example, if one
+statement fails, the next move is to rollback, always. Similarly, I would be worried about forgetting to commit the
+transaction at some point (wouldn&rsquo;t be the first time).</p>
+
+<p><strong>This kind of code seems like it should be a primitive in your codebase</strong></p>
+
+<p>When you deal with common error scenarios (timeouts, retries, etc.) it&rsquo;s generally a good practice to introduce some
+primitives in your codebase to handle these.</p>
+
+<p>For example, a function like <code>FetchJSON(url string, params ...interface{}) error</code> can be used to set open/request
+timeouts and handle any application specific errors in the same way everywhere. Then you just call this method whenever
+you need to fetch some JSON.</p>
+
+<p><strong>Not all &ldquo;errors&rdquo; are covered</strong></p>
+
+<p>In the example above, what happens if one of the calls panics? This might not be a problem, but depending on the
+<code>IsolationLevel</code> for the transaction, failure to explictly rollback could be an issue.</p>
+
+<p>A better solution would recover from the panic, rollback, and then re-panic.</p>
+
+<h2 id="adding-withtransaction">Adding WithTransaction</h2>
+
+<p>The first thing we&rsquo;ll want to do is create a <code>func</code> to wrap the transaction logic so we don&rsquo;t need to do this
+everywhere. There are several ways to do this, but I generally use something like this.</p>
+
+<p><strong>Transaction Helper</strong></p>
+
+<script src="//gist.github.com/pseudomuto/0900a7a3605470760579752fcf0fc2b7.js?file=transaction.go"></script>
+
+<p><strong>Updated code for main</strong></p>
+
+<script src="//gist.github.com/pseudomuto/0900a7a3605470760579752fcf0fc2b7.js?file=main_2.go"></script>
+
+<p>This is better (IMO), but as we copy/paste this around the codebase, there&rsquo;s an aweful lot of repetition still
+happening.</p>
+
+<p>Ideally, we&rsquo;d be able to supply a set of commands to be run, and have them all take place in the same
+transaction.</p>
+
+<h2 id="implementing-a-pipeline">Implementing a Pipeline</h2>
+
+<p>We can create the concept of a <em>pipeline</em> here that will run statements one by one within a transaction and chain the
+last insert id along with each call.</p>
+
+<script src="//gist.github.com/pseudomuto/0900a7a3605470760579752fcf0fc2b7.js?file=pipeline.go"></script>
+
+<p><strong>Updated code for main</strong></p>
+
+<script src="//gist.github.com/pseudomuto/0900a7a3605470760579752fcf0fc2b7.js?file=main_3.go"></script>
+
+<p>This seems much easier to read, and is certainly easy to replicate across your application. I&rsquo;m definitely interested in
+opinions, so please leave a comment if you&rsquo;ve got one!</p>
+
+    </div>
+  </section>
+
+  <section id="tag-pane" class="row meta">
+    
+    <div class="col-md-12">
+      <h6 class="text-right meta">
+        
+        
+        
+        TAGS:
+        
+        
+        <a class="meta" href="/tags/golang">GOLANG</a>
+        
+        
+        
+      </h6>
+    </div>
+    
+  </section>
+
+  
+  <article>
+    <div id="disqus_thread"></div>
+<script>
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "pseudomuto" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  </article>
+  
+
+  <section id="menu-pane" class="row menu text-center">
+  
+  
+  <span><a class="menu-item" href="https://pseudomuto.com/2015/09/monitoring-rails-requests-with-statsd/">&lt; prev | </a></span>
+  
+  
+  <span><a class="menu-item" href="/blog">blog</a></span>
+  
+  
+  
+  <h4 class="text-center"><a class="menu-item" href="https://pseudomuto.com/">home</a></h4>
+</section>
+
+
+
+      <footer>
+        <hr>
+        <h6 class="text-center copyright">Copyright &copy; 2018 pseudomuto.com. All rights reserved.</h6>
+      </footer>
+    </div>
+
+    
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-43533697-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-521a7d057b074526"></script>
+    <script type="text/javascript">
+      addthis.layers({ 'theme': 'transparent', 'share': { 'numPreferredServices': 5 } });
+    </script>
+    
+  </body>
+</html>
